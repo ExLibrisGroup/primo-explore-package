@@ -76,7 +76,8 @@ prm-topbar.md-primoExplore-theme input {....}
 
 -  cd to the project base directory (C:\**\**\primo-explore-devenv)
 -  Run `gulp css-colors` to save the OTB css file
--  Run `css-color-extractor primo-explore/tmp/app.css --format=css  > primo-explore/tmp/colors.css` to extract the color definitions from the OTB css file and copy the css rules to primo-explore/custom/css/custom1.css
+-  Run `css-color-extractor primo-explore/tmp/app.css --format=css  > primo-explore/tmp/colors.css` to extract the color definitions from the OTB css file and copy the css rules to primo-explore/custom/css/custom1.css by opening colors.css and copying its content to custom1.css
+
 
 
 Run the following steps repeatedly until you are satisfied with the result
