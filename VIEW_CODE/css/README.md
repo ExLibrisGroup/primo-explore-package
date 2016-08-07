@@ -121,6 +121,7 @@ You will get:
 -  Select the parent container containing the search result and the facets
 -  Copy the selector definition using your browsers' dev tools
 -  Define the container as
+
 ```
 display:flex;
 flex-flow:row-reverse;
@@ -129,7 +130,7 @@ flex-flow:row-reverse;
 
 - complete css definition:
 ```
-prm-search > md-content.md-primoExplore-theme .main {
+prm-search > md-content.md-primoExplore-theme .main, prm-search > md-content.md-primoExplore-theme.main {
     display: -webkit-flex; !* Safari *!
     -webkit-flex-flow: row-reverse wrap; !* Safari 6.1+ *!
     display: flex;
@@ -143,7 +144,10 @@ prm-search > md-content.md-primoExplore-theme .main {
 ```
 -  Save and refresh your browser
 
+-  The result:
 
+
+ ![Facets image](../../help_files/factes.png "Factes Changes")
 
 
 
