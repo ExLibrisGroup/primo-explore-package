@@ -147,7 +147,7 @@ prm-search > md-content.md-primoExplore-theme .main, prm-search > md-content.md-
 -  The result:
 
 
- ![Facets image](../../help_files/factes.png "Factes Changes")
+ ![Facets image](../../help_files/facets.png "Factes Changes")
 
 
 
