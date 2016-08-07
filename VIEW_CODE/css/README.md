@@ -70,27 +70,50 @@ prm-topbar.md-primoExplore-theme input {....}
 ##Recipes/Examples:
 
 
-# css Recipe 1 - Color Scheme
+# css Recipe 1 - Color Scheme (Starting from August 2016 Release)
 
+-  Open the `colors.json` file in the root of your view folder
+-  You will see a json object with our default color scheme:
+
+    ```
+    {
+        "primary": "#53738C",
+        "secondary" : "#A9CDD6",
+        "backgroundColor" : "white",
+        "links": "#5C92BD",
+        "warning": "tomato"
+      }
+      ```
+-  In the August 2016 release - we support the definition of the primary color, just change the definition and save the file
+-  In the November 2016 release we plan to add support to the additional colors - giving you the ability to easily customize the majority of the color scheme.
 -  Open a new command line window
 
 -  cd to the project base directory (C:\**\**\primo-explore-devenv)
--  Run `gulp css-colors` to save the OTB css file
--  Run `css-color-extractor primo-explore/tmp/app.css --format=css  > primo-explore/tmp/colors.css` to extract the color definitions from the OTB css file and copy the css rules to primo-explore/custom/css/custom1.css by opening colors.css and copying its content to custom1.css
+-  Run `gulp app-css --view <your-view/folder code>` for example:
+        `gulp app-css --view Auto1`
+-  A new file will be created on your package css directory named: `app-colors.css`
+-  This file will eventually contain all of the primo-explore theme color definition
+    We will continue to add more color definitions to extend this ability
+- Refresh your browser to see the changes take affect
+- For example, for the following colr.json file:
+
+```
+{
+  "primary": "#512DA8",
+  "secondary" : "#D1C4E9",
+  "backgroundColor" : "#BDBDBD",
+  "links": "#009688",
+  "warning": "#FF5722"
+}
 
 
+```
 
-Run the following steps repeatedly until you are satisfied with the result
+You will get:
 
+ ![Color Changes image](./help_files/colors1.png "Color Changes")
 
--  Choose a color from the interface (using your browsers' dev tools or extensions such as colorzilla)
-
-
--  Choose the new color from your library color scheme
--  Replace all values in the custom1.css file
--  Save and refresh your browser
-
-
+ ![Color Changes image](./help_files/colors2.png "Color Changes")
 
 # css Recipe 2 - Moving the Facets to the Left
 
