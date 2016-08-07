@@ -92,10 +92,10 @@ prm-topbar.md-primoExplore-theme input {....}
 -  Run `gulp app-css --view <your-view/folder code>` for example:
         `gulp app-css --view Auto1`
 -  A new file will be created on your package css directory named: `app-colors.css`
--  This file will eventually contain all of the primo-explore theme color definition
+-  This file will eventually contain all of the primo-explore theme color definitions.
     We will continue to add more color definitions to extend this ability
 - Refresh your browser to see the changes take affect
-- For example, for the following colr.json file:
+- For example, for the following colors.json file:
 
 ```
 {
@@ -111,9 +111,9 @@ prm-topbar.md-primoExplore-theme input {....}
 
 You will get:
 
- ![Color Changes image](./help_files/colors1.png "Color Changes")
+ ![Color Changes image](../../help_files/colors1.png "Color Changes")
 
- ![Color Changes image](./help_files/colors2.png "Color Changes")
+ ![Color Changes image](../../help_files/colors2.png "Color Changes")
 
 # css Recipe 2 - Moving the Facets to the Left
 
