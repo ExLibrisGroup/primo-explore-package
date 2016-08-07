@@ -16,7 +16,7 @@
 
  ![August 2016 Release structure image](../../help_files/htmlStructureAug.png "August 2016 Release structure")
 
-   ##This is how your directory structure should look like in the November 2016 Release:
+   *This is how your directory structure should look like in the November 2016 Release:*
 
  ![November 2016 Release structure image](../../help_files/htmlStructure.png "November 2016 Release structure")
 
