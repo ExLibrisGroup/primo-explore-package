@@ -12,11 +12,11 @@
    1. homepage_fe_FR.html (in the August 2016 Release use home_fe_FR.html)
    2. help_de_DE.html(Available in the November 2016 Release)
 
-   ##This is how your directory structure should look like in the August 2016 Release:
+   -    This is how your directory structure should look like in the August 2016 Release:
 
  ![August 2016 Release structure image](../../help_files/htmlStructureAug.png "August 2016 Release structure")
 
-   *This is how your directory structure should look like in the November 2016 Release:*
+   -    This is how your directory structure should look like in the November 2016 Release:
 
  ![November 2016 Release structure image](../../help_files/htmlStructure.png "November 2016 Release structure")
 
