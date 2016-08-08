@@ -135,7 +135,7 @@ app.controller('SearchBarAfterController', [function () {
 ```
 -  Edit the directive template to reference the getter methods
 ```
-<div layout="row" layout-align="center center">
+template: `<div layout="row" layout-align="center center">
                          <md-card flex="80">
                          <md-card-title>
                              <md-card-title-text><span class="md-headline">
@@ -153,7 +153,8 @@ app.controller('SearchBarAfterController', [function () {
                              <md-button>Action 2</md-button>
                          </md-card-actions>
                          </md-card>
-                     </div>
+                     </div>`
+
   ```
 -  Save and refresh your browser
 
