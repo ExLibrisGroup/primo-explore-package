@@ -232,6 +232,17 @@ app.component('prmFullViewAfter', {
                     </div>`
     });
    ```
+
+-  Edit the custom1.css file and add the following definitions:
+
+ ```
+ .full-view-section.loc-altemtrics{
+     background-color: #f3f3f3;
+     margin-top:0px;
+     padding-left: 3em;
+ }
+ ```
+
 -  Save and refresh your browser
 
 ![Altmetrics example 3 image](../../help_files/js7.png "Altmetrics 3 example")
