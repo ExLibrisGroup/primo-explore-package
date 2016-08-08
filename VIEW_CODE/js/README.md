@@ -113,15 +113,17 @@ Example:
 ```
 - Add a controller definition:
 ```
-    controller: 'SearchAfterController',
+    controller: 'SearchBarAfterController',
 ```
 - Define a controller with 2 getter methods to return the query and selected scope
 ```
 app.controller('SearchBarAfterController', [function () {
         var vm = this;
 
+
         vm.getSelectdScope = getSelectdScope;
         vm.getQuery = getQuery;
+
 
         function getSelectdScope() {
             return vm.parentCtrl.scopeField;
@@ -130,7 +132,7 @@ app.controller('SearchBarAfterController', [function () {
         function getQuery() {
             return vm.parentCtrl.mainSearchField;
         }
-}]);
+    }]);
 
 ```
 -  Edit the directive template to reference the getter methods
