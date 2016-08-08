@@ -83,7 +83,7 @@ Example:
 
 -  Save and refresh your browser
 
-
+![Hello World image](../../help_files/js1.png "Hello World  Changes")
 
 # JavaScript Recipe 2 - a Dynamic Directive
 -  Use the `showDirectives` scriplet to identify the `prmSearchBarAfter` directive which you will plugin to
