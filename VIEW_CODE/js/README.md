@@ -164,6 +164,8 @@ template: `<div layout="row" layout-align="center center">
 
 # JavaScript Recipe 3 - Adding the Altmetrics Widget
 -  Use the `showDirectives` scriplet to identify the `prmFullViewAfter` directive which you will plugin to
+![Altmetrics example image](../../help_files/js5.png "Altmetrics example")
+
 -  Run the following command in your browsers' console tab:
 `angular.reloadWithDebugInfo()`
 -  Focus on the `prmFullViewAfter` directive
@@ -171,6 +173,7 @@ template: `<div layout="row" layout-align="center center">
 `angular.element($0).scope().ctrl`
 
 - Review the properties of the directive to decide which data elements can be used, avoid methods/functions as they wont be backwards compatible
+![Altmetrics example 2 image](../../help_files/js6.png "Altmetrics 2 example")
 
 - Edit  primo-explore/custom/js/custom.js file and add a component declaration for the `prmFullViewAfter` directive
 
