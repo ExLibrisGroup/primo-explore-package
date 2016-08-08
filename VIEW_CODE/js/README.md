@@ -160,6 +160,7 @@ template: `<div layout="row" layout-align="center center">
   ```
 -  Save and refresh your browser
 
+![dynamic example image](../../help_files/js4.png "dynamic example")
 
 # JavaScript Recipe 3 - Adding the Altmetrics Widget
 -  Use the `showDirectives` scriplet to identify the `prmFullViewAfter` directive which you will plugin to
