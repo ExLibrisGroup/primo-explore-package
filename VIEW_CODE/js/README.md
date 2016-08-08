@@ -130,10 +130,12 @@ app.controller('SearchBarAfterController', [function () {
         function getQuery() {
             return vm.parentCtrl.mainSearchField;
         }
+}]);
 
 ```
 -  Edit the directive template to reference the getter methods
-``` <div layout="row" layout-align="center center">
+```
+<div layout="row" layout-align="center center">
                          <md-card flex="80">
                          <md-card-title>
                              <md-card-title-text><span class="md-headline">
