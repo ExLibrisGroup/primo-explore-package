@@ -164,6 +164,7 @@ template: `<div layout="row" layout-align="center center">
 
 # JavaScript Recipe 3 - Adding the Altmetrics Widget
 -  Use the `showDirectives` scriplet to identify the `prmFullViewAfter` directive which you will plugin to
+
 ![Altmetrics example image](../../help_files/js5.png "Altmetrics example")
 
 -  Run the following command in your browsers' console tab:
@@ -173,16 +174,26 @@ template: `<div layout="row" layout-align="center center">
 `angular.element($0).scope().ctrl`
 
 - Review the properties of the directive to decide which data elements can be used, avoid methods/functions as they wont be backwards compatible
+
 ![Altmetrics example 2 image](../../help_files/js6.png "Altmetrics 2 example")
 
 - Edit  primo-explore/custom/js/custom.js file and add a component declaration for the `prmFullViewAfter` directive
 
 - Add a binding definition the input parentCtrl
-`bindings: {parentCtrl: '<'},`
+
+```
+    bindings: {parentCtrl: '<'},
+```
 - Add a controller definition:
-`controller: 'FullViewAfterController',`
+
+```
+    controller: 'FullViewAfterController',
+```
+
 - Define a controller that populates the doi and loads the Altmetrics js file
-```app.controller('FullViewAfterController', ['angularLoad', function (angularLoad) {
+
+```
+app.controller('FullViewAfterController', ['angularLoad', function (angularLoad) {
         var vm = this;
         vm.doi = vm.parentCtrl.item.pnx.addata.doi[0] || '';
 
@@ -194,7 +205,12 @@ template: `<div layout="row" layout-align="center center">
     }]);
 ```
 - Edit the directive template to add the Altmetrics div and bind the data-doi attribute to the controller
-```<div class="full-view-section-content" ng-if="$ctrl.doi">
+```
+app.component('prmFullViewAfter', {
+        bindings: {parentCtrl: '<'},
+        controller: 'FullViewAfterController',
+        template: `<div class="full-view-section loc-altemtrics" flex-md="65" flex-lg="65" flex-xl="65" flex>
+                    <div class="layout-full-width full-view-section-content" ng-if="$ctrl.doi">
                     <div class="section-header" layout="row" layout-align="center center">
                         <h2 class="section-title md-title light-text">
                             Social Popularity Statistics (AltMetrics) :
@@ -213,6 +229,9 @@ template: `<div layout="row" layout-align="center center">
                            </div>
                         </div>
                     </div>
+                    </div>`
+    });
    ```
 -  Save and refresh your browser
 
+![Altmetrics example 3 image](../../help_files/js7.png "Altmetrics 3 example")
