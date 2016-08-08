@@ -92,12 +92,18 @@ Example:
     angular.reloadWithDebugInfo()
 ```
 -  Focus on the `prmSearchBarAfter` directive
+
+![Focus image](../../help_files/js2.png "Focus")
+
 -  Run the following command in your browsers' console tab:
 ```
     angular.element($0).scope().ctrl
 ```
 
 - Review the properties of the directive to decide which data elements can be used, avoid methods/functions as they wont be backwards compatible
+
+![properties image](../../help_files/js3.png "properties")
+
 
 - Edit  primo-explore/custom/js/custom.js file and add a component declaration for the `prmSearchBarAfter` directive
 
