@@ -60,6 +60,10 @@ Example:
 
 -  Use the `showDirectives` (located in the root directory of this package is the showDirectives.txt file
 , just add the content of the file as a bookmark to your browser) scriplet to identify the `prmSearchBarAfter` directive which you will plugin to
+
+
+![Show Directives image](../../help_files/showDirectives.png "Show Directives Changes")
+
 -  Edit the primo-explore/custom/js/custom.js file and add a component declaration for the `prmSearchBarAfter` directive
 
     ```
@@ -174,7 +178,7 @@ app.controller('SearchBarAfterController', [function () {
         };
     }]);
 ```
-- Edit the directive template to add the Altmetrics div and bind the data-doi attribure to the controller
+- Edit the directive template to add the Altmetrics div and bind the data-doi attribute to the controller
 ```<div class="full-view-section-content" ng-if="$ctrl.doi">
                     <div class="section-header" layout="row" layout-align="center center">
                         <h2 class="section-title md-title light-text">
