@@ -77,15 +77,23 @@ prm-topbar.md-primoExplore-theme input {....}
 
     ```
     {
-        "primary": "#53738C",
-        "secondary" : "#A9CDD6",
-        "backgroundColor" : "white",
-        "links": "#5C92BD",
-        "warning": "tomato"
-      }
-      ```
+      "primary": "#53738C",
+      "secondary" : "#A9CDD6",
+      "backgroundColor" : "white",
+      "links": "#5C92BD",
+      "warning": "tomato",
+      "positive": "#0f7d00",
+      "negative": "gray",
+      "notice": "#e08303"
+    }    
+    ```
 -  In the August 2016 release - we support the definition of the primary color, just change the definition and save the file
 -  In the November 2016 release we plan to add support to the additional colors - giving you the ability to easily customize the majority of the color scheme.
+
+The colors are mapped to different elements in the user interface:
+
+![Color Changes image](../../help_files/colors3.png "Color Changes")
+
 -  Open a new command line window
 
 -  cd to the project base directory (C:\**\**\primo-explore-devenv)
