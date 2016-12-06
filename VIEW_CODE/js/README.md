@@ -54,6 +54,15 @@ Example:
 
 ##Recipes/Examples:
 
+# Note:
+
+The examples below use the back tic '`' for templates - which will work using babel (Documentation on how to do so will be shared)
+This causes the examples to fail on IE11 browsers.
+
+To solve this you can replace the '`' with regular apostrophe ("'") and use a single line tempalate (less readable but works just as well).
+
+
+
 
 # JavaScript Recipe 1 - a Static `hello world` html Message
 
