@@ -106,7 +106,7 @@ To solve this you can replace the '`' with regular apostrophe ("'") and use a si
 
 -  Run the following command in your browsers' console tab:
 ```
-    angular.element($0).scope().ctrl
+    angular.element($0).scope().$ctrl (angular.element($0).scope().ctrl in version earlier than February 2017)
 ```
 
 - Review the properties of the directive to decide which data elements can be used, avoid methods/functions as they wont be backwards compatible
