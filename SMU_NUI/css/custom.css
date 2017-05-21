@@ -1,24 +1,7 @@
 /* custom.css */
 
-.main.padded-container {
-   flex-direction: row-reverse;
-}
-
 prm-topbar .top-nav-bar {
   background-color: #f1f1f1;
-}
-
-.top-nav-bar prm-main-menu {
-   order:2;
-}
-
-.top-nav-bar prm-search-bookmark-filter {
-  order: 3;
-  margin-left: .5em;
-}
-
-.top-nav-bar prm-user-area {
-  order: 4;
 }
 
 prm-main-menu .item-content {
