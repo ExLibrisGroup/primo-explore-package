@@ -22,4 +22,9 @@ prm-logo .product-logo {
   color: #102b72;
 }
 
+/* Adjustment for "TWEAK MY RESULTS"/"CLOSE FILTER" handle on mobile. */
+button#sidebar-trigger.button-with-icon.layout-full-height.md-button.md-primoExplore-theme.md-ink-ripple {
+  color: darkred;
+}
+
 /* custom.css */
