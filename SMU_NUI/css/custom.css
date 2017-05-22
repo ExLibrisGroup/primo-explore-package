@@ -20,9 +20,13 @@ prm-user-area .user-menu-button .user-name {
   color: #102b72;
 }
 
-/* Adjustment for "TWEAK MY RESULTS"/"CLOSE FILTER" handle on mobile. */
-button#sidebar-trigger.button-with-icon.layout-full-height.md-button.md-primoExplore-theme.md-ink-ripple {
-  color: darkred;
+/* Change color of "Tweak my results" on mobile. */
+#sidebar-trigger {
+  color: white;
+}
+
+md-toolbar.default-toolbar:not(.md-menu-toolbar) {
+  background-color: #102b72;
 }
 
 /* Hide Tags in main menu. */
