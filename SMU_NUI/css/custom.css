@@ -44,4 +44,9 @@ prm-logo .product-logo-custom img {
   background-color: #f1f1f1;
 }
 
+/* Hide Save/Email in full details. */
+#getit_link2, button[aria-label="Save/Email"] {
+  display: none;
+}
+
 /* custom.css */
