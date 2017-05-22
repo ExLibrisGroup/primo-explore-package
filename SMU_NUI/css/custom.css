@@ -24,17 +24,8 @@ button#sidebar-trigger.button-with-icon.layout-full-height.md-button.md-primoExp
 
 /* Hide Tags in main menu. */
 /* https://knowledge.exlibrisgroup.com/Primo/Knowledge_Articles/How_to_disable_the_tags_in_Primo_classic_and_new_UI */
-
-.md-button[aria-label='nui.mainmenu.label.tags']  {
-  display: none;
-}
-
-md-card.transparent-card:nth-child(7) {  /* number depends on the order of the items */
-  display: none;
-}
-
-#tags {
-  display: none;
+.md-button[aria-label='nui.mainmenu.label.tags'], md-card.transparent-card:nth-child(7), #tags, button[aria-label="Tags"] {
+  display:none;
 }
 
 /* Link library logo to the library homepage. */
