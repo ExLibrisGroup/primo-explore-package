@@ -61,4 +61,9 @@ button[aria-label="Save/Email"] {
   display: none;
 }
 
+/* Hide "Include records not in library collection" under "Tweak my results". */
+prm-facet div.sidebar-section:nth-child(2) {
+  display: none;
+}
+
 /* custom.css */
