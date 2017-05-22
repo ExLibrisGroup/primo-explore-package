@@ -12,7 +12,8 @@ prm-user-area .user-menu-button .user-name {
   color: #333333;
 }
 
-#favorites-button {
+/* Change color of round buttons at the top right: search history, favourites. */
+#favorites-button, .md-button[aria-label='Go to search history'], #search-button {
   color: #102b72;
 }
 
