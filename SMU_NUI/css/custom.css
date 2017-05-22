@@ -12,12 +12,6 @@ prm-user-area .user-menu-button .user-name {
   color: #333333;
 }
 
-prm-logo .product-logo {
-  padding: .5em;
-  width: 193px;
-  background-color: #f1f1f1;
-}
-
 #favorites-button {
   color: #102b72;
 }
@@ -40,6 +34,22 @@ md-card.transparent-card:nth-child(7) {  /* number depends on the order of the i
 
 #tags {
   display: none;
+}
+
+/* Link library logo to the library homepage. */
+/* https://knowledge.exlibrisgroup.com/Primo/Product_Documentation/New_Primo_User_Interface/New_UI_Customization_-_Best_Practices#Creating_a_Clickable_Logo */
+prm-logo .product-logo {
+  display: none;
+}
+
+prm-logo .product-logo-custom {
+  display: flex
+}
+
+prm-logo .product-logo-custom img {
+  padding: .5em;
+  width: 193px;
+  background-color: #f1f1f1;
 }
 
 /* custom.css */
