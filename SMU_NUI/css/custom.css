@@ -56,4 +56,9 @@ button[aria-label="Save/Email"] {
   display: none;
 }
 
+/* Hide availability line in full details. */
+.prm-full-view-dialog prm-search-result-availability-line {
+  display: none;
+}
+
 /* custom.css */
