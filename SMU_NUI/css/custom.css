@@ -12,6 +12,11 @@ prm-user-area .user-menu-button .user-name {
   color: #333333;
 }
 
+/* Change color of the A-Z search bar. */
+prm-journals-search-bar {
+  background-color: #102b72;
+}
+
 /* Change color of round buttons at the top right: search history, favourites. */
 #favorites-button,
 .md-button[aria-label="Go to search history"],
