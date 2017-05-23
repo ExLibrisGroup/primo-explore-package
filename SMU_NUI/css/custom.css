@@ -107,4 +107,24 @@ prm-action-list md-nav-bar li.md-nav-item:nth-child(9) {
   order: 1;
 }
 
+/* Workaround "available"/"unavailable" class in availability status for the time being. */
+span.best-location-sub-location.locations-link,
+span.best-location-delivery.locations-link {
+  color: #5c92bd;
+}
+
+span.available_in_institution,
+span.available_in_institution span.best-location-library-code.locations-link,
+span.not_restricted,
+span.fulltext {
+  color: #0f7d00;
+}
+
+span.unavailable_in_institution,
+span.unavailable_in_institution span.best-location-library-code.locations-link,
+span.restricted,
+span.no_fulltext {
+  color: gray;
+}
+
 /* custom.css */
