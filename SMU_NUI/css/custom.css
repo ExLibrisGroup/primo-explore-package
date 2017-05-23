@@ -66,7 +66,7 @@ button[aria-label="Save/Email"] {
 }
 
 /* Hide "Include records not in library collection" under "Tweak my results". */
-prm-facet div.sidebar-section:nth-child(2) {
+prm-facet div.sidebar-section.margin-top-small.margin-bottom-medium.compensate-padding-left {
   display: none;
 }
 
