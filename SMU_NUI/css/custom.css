@@ -53,8 +53,8 @@ prm-logo .product-logo-custom {
 }
 
 prm-logo .product-logo-custom img {
-  padding: .5em;
-  width: 193px;
+  padding: 12px 4px 0 4px;
+  width: 150px;
   background-color: #f1f1f1;
 }
 
