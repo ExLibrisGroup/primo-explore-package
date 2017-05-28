@@ -49,13 +49,24 @@ prm-logo .product-logo {
 }
 
 prm-logo .product-logo-custom {
-  display: flex
+  display: flex;
+  background-color: none;
+  transition: background-color 0.4s cubic-bezier(0.25,0.8,0.25,1);
 }
 
 prm-logo .product-logo-custom img {
-  padding: 12px 4px 0 4px;
-  width: 150px;
-  background-color: #f1f1f1;
+  padding: 8px 0 0 0;
+  width: 142px;
+}
+
+prm-logo .product-logo-custom:hover {
+  background-color: rgba(0,0,0,0.1);
+  transition: background-color 0.4s cubic-bezier(0.25,0.8,0.25,1)
+}
+
+prm-logo .product-logo a:hover {
+  background: none;
+  box-shadow: none;
 }
 
 /* Hide Save/Email in full details. */
