@@ -116,4 +116,9 @@ button[aria-label="Close Full Display"] {
   color: white;
 }
 
+/* Change color of "..." on mobile menu. */
+button.mobile-menu-button[aria-label="Open user actions menu button"] {
+  color: #102b72;
+}
+
 /* custom.css */
