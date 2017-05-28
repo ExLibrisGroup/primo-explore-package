@@ -111,4 +111,9 @@ prm-action-list md-nav-bar li.md-nav-item:nth-child(9) {
   order: 1;
 }
 
+/* Change color of "Back to results list" (full details page) on mobile. */
+button[aria-label="Close Full Display"] {
+  color: white;
+}
+
 /* custom.css */
