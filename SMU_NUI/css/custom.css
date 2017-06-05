@@ -76,7 +76,8 @@ button[aria-label="Save/Email"] {
 }
 
 /* Hide availability line in full details. */
-.prm-full-view-dialog prm-search-result-availability-line {
+.prm-full-view-dialog prm-search-result-availability-line,
+prm-full-view-service-container * prm-search-result-availability-line {
   display: none;
 }
 
