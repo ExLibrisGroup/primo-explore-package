@@ -86,9 +86,10 @@ prm-facet div.sidebar-section.margin-top-small.margin-bottom-medium.compensate-p
   display: none;
 }
 
-/* Change the order of the Send to buttons. */
+/* Adjust the order and visibility of the action buttons. */
 prm-action-list md-nav-bar li.md-nav-item:nth-child(1) {
   order: 9;
+  display: none;
 }
 
 prm-action-list md-nav-bar li.md-nav-item:nth-child(2) {
@@ -97,6 +98,7 @@ prm-action-list md-nav-bar li.md-nav-item:nth-child(2) {
 
 prm-action-list md-nav-bar li.md-nav-item:nth-child(3) {
   order: 7;
+  display: none;
 }
 
 prm-action-list md-nav-bar li.md-nav-item:nth-child(4) {
@@ -105,6 +107,7 @@ prm-action-list md-nav-bar li.md-nav-item:nth-child(4) {
 
 prm-action-list md-nav-bar li.md-nav-item:nth-child(5) {
   order: 5;
+  display: none;
 }
 
 prm-action-list md-nav-bar li.md-nav-item:nth-child(6) {
@@ -121,6 +124,11 @@ prm-action-list md-nav-bar li.md-nav-item:nth-child(8) {
 
 prm-action-list md-nav-bar li.md-nav-item:nth-child(9) {
   order: 1;
+  margin-right: 0;
+}
+
+#scrollActionList li {
+  margin-right: 0;
 }
 
 /* Change color of "Back to results list" (full details page). */
