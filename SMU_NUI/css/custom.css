@@ -146,4 +146,14 @@ prm-account button[aria-label="Go Back To Search"] {
   color: white;
 }
 
+/* Change color of "My Favorites" toolbar. */
+prm-favorites-tool-bar md-toolbar div.md-toolbar-tools {
+  background-color: #c5c5c5;
+}
+
+prm-favorites-tool-bar md-toolbar div.md-toolbar-tools span.toolbar-title {
+  color: #333333;
+  font-weight: 600;
+}
+
 /* custom.css */
