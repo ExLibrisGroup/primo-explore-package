@@ -131,6 +131,13 @@ prm-action-list md-nav-bar li.md-nav-item:nth-child(9) {
   margin-right: 0;
 }
 
+prm-action-list md-nav-bar li.md-nav-item[name="apa"],
+prm-action-list md-nav-bar li.md-nav-item[name="chicagob"],
+prm-action-list md-nav-bar li.md-nav-item[name="mla7"] {
+  order: 0;
+  display: list-item;
+}
+
 /* Change color of "Back to results list" (full details page). */
 button[aria-label="Close Full Display"],
 button[aria-label="navigate back to search results"],
