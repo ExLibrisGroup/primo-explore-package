@@ -140,8 +140,8 @@ prm-action-list md-nav-bar li.md-nav-item[name="mla7"] {
 
 /* Change color of "Back to results list" (full details page). */
 button[aria-label="Close Full Display"],
-button[aria-label="navigate back to search results"],
-button[aria-label="navigate back to search results"]:hover {
+button.back-button[aria-label="navigate back to search results"],
+button.back-button[aria-label="navigate back to search results"]:hover {
   color: white;
 }
 
@@ -160,8 +160,8 @@ prm-account md-toolbar h1.toolbar-title {
   color: white;
 }
 
-prm-account button[aria-label="Go Back To Search"],
-prm-account button[aria-label="Go Back To Search"]:hover {
+prm-account button.back-button[aria-label="Go Back To Search"],
+prm-account button.back-button[aria-label="Go Back To Search"]:hover {
   color: white;
 }
 
