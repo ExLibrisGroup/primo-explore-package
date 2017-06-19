@@ -1,7 +1,7 @@
 # The Primo New UI Customization Workflow Development Environment
 
 
-##JavaScript documentation
+## JavaScript documentation
 
 - When you want to add functionality to your Primo installation you will be using Angular Directives.
 
@@ -41,7 +41,7 @@ Example:
 
 
 
-##Concept
+## Concept
 
 - When You want to add your own JavaScript functionality - you will need to plug-in to placeholder Directives we added to the system.
 - Those directive are added as the last child element for every Primo directive (defined by the `prm-` prefix)
@@ -52,7 +52,7 @@ Example:
 
 
 
-##Recipes/Examples:
+## Recipes/Examples:
 
 # Note:
 
