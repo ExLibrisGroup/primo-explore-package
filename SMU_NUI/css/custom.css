@@ -175,4 +175,22 @@ prm-favorites-tool-bar md-toolbar div.md-toolbar-tools span.toolbar-title {
   font-weight: 600;
 }
 
+/* Styles for landing page content. */
+.start-here {
+  width: 200px;
+  padding-right: 24px;
+  padding-bottom: 24px;
+}
+
+md-card a {
+  color: #5c92bd;
+  font-weight: 500;
+}
+
+md-card .advert {
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+}
+
 /* custom.css */
