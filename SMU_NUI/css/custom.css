@@ -155,11 +155,8 @@ prm-journals prm-search-result-availability-line {
   display: none;
 }
 
-/* Change color of "My Library Card" title. */
-prm-account md-toolbar h1.toolbar-title {
-  color: white;
-}
-
+/* Change color of "My Library Account" title. */
+prm-account md-toolbar h1.toolbar-title,
 prm-account button.back-button[aria-label="Go Back To Search"],
 prm-account button.back-button[aria-label="Go Back To Search"]:hover {
   color: white;
