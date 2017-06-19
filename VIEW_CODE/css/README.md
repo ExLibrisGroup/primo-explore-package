@@ -1,7 +1,7 @@
 # The Primo New UI Customization Workflow Development Environment
 
 
-##css documentation
+## css documentation
 
 - Primo uses Angular Directives massively in this project
 
@@ -67,7 +67,7 @@ prm-topbar.md-primoExplore-theme input {....}
 
 
 
-##Recipes/Examples:
+## Recipes/Examples:
 
 
 # css Recipe 1 - Color Scheme (Starting from August 2016 Release)
