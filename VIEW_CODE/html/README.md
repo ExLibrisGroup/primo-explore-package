@@ -1,7 +1,7 @@
 # The Primo New UI Customization Workflow Development Environment
 
 
-##html documentation
+## html documentation
 
  - In this folder you will find static html files in their OTB state
  - The files are separated into directories (starting from the November 2016 Release)
