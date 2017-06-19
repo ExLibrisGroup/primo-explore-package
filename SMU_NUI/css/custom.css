@@ -175,6 +175,19 @@ prm-favorites-tool-bar md-toolbar div.md-toolbar-tools span.toolbar-title {
   font-weight: 600;
 }
 
+/* Hide edit options in "Personal details" inside "My Library Account". */
+prm-personal-info md-card-header {
+  padding: 16px 0 0 0;
+}
+prm-personal-info md-card-header .md-toolbar-tools {
+  display: none;
+}
+
+prm-change-lang + md-divider,
+button[aria-label="Edit password information"] {
+  display: none;
+}
+
 /* Styles for landing page content. */
 .start-here {
   width: 200px;
