@@ -203,4 +203,10 @@ md-card .advert {
   text-align: center;
 }
 
+md-card .advert a:hover {
+  background: none;
+  box-shadow: none;
+  text-decoration: underline;
+}
+
 /* custom.css */
