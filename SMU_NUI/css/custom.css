@@ -209,4 +209,10 @@ md-card .advert a:hover {
   text-decoration: underline;
 }
 
+#quip {
+  position: fixed;
+  bottom: 10%;
+  left: 6%;
+}
+
 /* custom.css */
