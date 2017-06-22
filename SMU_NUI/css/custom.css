@@ -209,20 +209,10 @@ md-card .advert a:hover {
   text-decoration: underline;
 }
 
-#quip {
-  display: none;
+#quote {
   position: fixed;
   bottom: 10%;
   left: 6%;
-}
-
-#quip2 {
-  position: fixed;
-  bottom: 10%;
-  left: 6%;
-  color: #bdbdbd;
-  font-size: 24pt;
-  font-weight: 300;
 }
 
 /* custom.css */
