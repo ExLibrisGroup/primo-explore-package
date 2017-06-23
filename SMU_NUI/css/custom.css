@@ -209,10 +209,40 @@ md-card .advert a:hover {
   text-decoration: underline;
 }
 
-#quote {
-  position: fixed;
+#quote-1 {
+  position: absolute;
   bottom: 10%;
   left: 6%;
+}
+
+#quote-2 {
+  position: absolute;
+  bottom: 40%;
+  right: 40%;
+}
+
+#quote-3 {
+  position: absolute;
+  bottom: 60%;
+  left: 2%;
+}
+
+.quote {
+  font-size: 16px;
+  font-weight: 300;
+  text-align: right;
+  cursor: default;
+  color: #dddddd;
+  transition: color 6s cubic-bezier(0.25,0.8,0.25,1);
+}
+
+.quote .source {
+  padding-right: 0.5em;
+}
+
+.quote:hover {
+  color: #999999;
+  transition: color 1s cubic-bezier(0.25,0.8,0.25,1);
 }
 
 /* custom.css */
