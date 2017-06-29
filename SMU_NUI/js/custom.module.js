@@ -20,3 +20,16 @@ app.component('prmLogoAfter', {
   controller: 'prmLogoAfterController',
   template: '<div class="product-logo product-logo-custom" layout="row" layout-align="start center" layout-fill id="banner" tabindex="0" role="banner"><a href="https://library.smu.edu.sg"><img class="logo-image" alt="{{::(\'nui.header.LogoAlt\'|translate)}}" ng-src="{{$ctrl.getIconLink()}}" /></a></div>'
 });
+
+/**
+ * Hide mobile keyboard when user uses Enter instead of tapping the search button.
+ */
+app.directive('ngSubmit', function () {
+  return function (scope, element, attr) {
+    var inputs = element.find('input');
+    element.on('submit', function () {
+      inputs[0].focus();
+      inputs[0].blur();  /** input loses focus */
+    });
+  };
+});
