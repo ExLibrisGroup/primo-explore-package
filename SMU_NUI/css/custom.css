@@ -245,4 +245,13 @@ md-card .advert a:hover {
   transition: color 1s cubic-bezier(0.25,0.8,0.25,1);
 }
 
+/* Styles for version number. */
+#version {
+  position: fixed;
+  bottom: 2%;
+  left: 2%;
+  color: #eeeeee;
+  z-index: 10;
+}
+
 /* custom.css */
