@@ -254,4 +254,10 @@ md-card .advert a:hover {
   z-index: 10;
 }
 
+/* Workaround weird card heights on IE11. */
+md-card,
+md-card-content {
+  min-height: 1px;
+}
+
 /* custom.css */
