@@ -176,12 +176,8 @@ prm-favorites-tool-bar md-toolbar div.md-toolbar-tools span.toolbar-title {
 prm-personal-info md-card-header {
   padding: 16px 0 0 0;
 }
-prm-personal-info md-card-header .md-toolbar-tools {
-  display: none;
-}
 
-prm-change-lang + md-divider,
-button[aria-label="Edit password information"] {
+prm-personal-info md-card-header .md-toolbar-tools {
   display: none;
 }
 
