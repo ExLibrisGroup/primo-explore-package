@@ -181,6 +181,10 @@ prm-personal-info md-card-header .md-toolbar-tools {
   display: none;
 }
 
+prm-personal-info > div:nth-child(2) {
+  display: none;
+}
+
 /* Styles for landing page content. */
 .start-here {
   width: 200px;
