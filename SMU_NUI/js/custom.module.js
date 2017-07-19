@@ -37,7 +37,33 @@ app.directive('ngSubmit', function () {
 /**
  * Enable password option for specific patron groups.
  */
-app.controller('prmPersonalInfoAfterController', [function () {
+app.service('userService', ['jwtHelper', function (jwtHelper) {
+  var vm = this;
+
+  var user = '';
+  var userName = '';
+  var userGroup = 'GUEST';
+  var isGuest = true;
+
+  var decodedToken = null;
+  var jwt = sessionStorage.getItem('primoExploreJwt');
+  if (jwt) {
+    decodedToken = jwtHelper.decodeToken(jwt);
+
+    userGroup = decodedToken.userGroup;
+    isGuest = decodedToken.userGroup === 'GUEST';
+    user = isGuest ? decodedToken.user : '';
+    userName = isGuest ? decodedToken.userName : '';
+  }
+
+  Object.defineProperty(vm, 'user', { get() { return user; }});
+  Object.defineProperty(vm, 'userName', { get() { return userName; }});
+  Object.defineProperty(vm, 'userGroup', { get() { return userGroup; }});
+  Object.defineProperty(vm, 'isGuest', { get() { return isGuest; }});
+  Object.defineProperty(vm, 'isLoggedIn', { get() { return !isGuest; }});
+}]);
+
+app.controller('prmPersonalInfoAfterController', ['userService', function (userService) {
   var vm = this;
 
   vm.formMode = 'View';
@@ -54,7 +80,7 @@ app.controller('prmPersonalInfoAfterController', [function () {
 
   vm.showPasswordSection = function () {
     var allowedUserGroups = ['CORPORATE', 'ILLCHARGE', 'ILLINTL', 'ILLNETWORK', 'ILLRECIP', 'PERSONAL'];
-    return vm.parentCtrl.showPasswordSection() && (allowedUserGroups.indexOf(vm.parentCtrl.personalInfoService.jwtUtilService.getDecodedToken().userGroup) !== -1);
+    return vm.parentCtrl.showPasswordSection() && (allowedUserGroups.indexOf(userService.userGroup) !== -1);
   };
 
   vm.showLoginDialog = function () {
