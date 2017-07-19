@@ -53,8 +53,8 @@ app.controller('prmPersonalInfoAfterController', [function () {
   }
 
   vm.showPasswordSection = function () {
-    var allowed_user_groups = ['CORPORATE', 'ILLCHARGE', 'ILLINTL', 'ILLNETWORK', 'ILLRECIP', 'PERSONAL'];
-    return vm.parentCtrl.showPasswordSection() && (allowed_user_groups.indexOf(vm.parentCtrl.personalInfoService.jwtUtilService.getDecodedToken().userGroup) !== -1);
+    var allowedUserGroups = ['CORPORATE', 'ILLCHARGE', 'ILLINTL', 'ILLNETWORK', 'ILLRECIP', 'PERSONAL'];
+    return vm.parentCtrl.showPasswordSection() && (allowedUserGroups.indexOf(vm.parentCtrl.personalInfoService.jwtUtilService.getDecodedToken().userGroup) !== -1);
   };
 
   vm.showLoginDialog = function () {
