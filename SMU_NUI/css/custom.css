@@ -133,7 +133,9 @@ prm-action-list md-nav-bar li.md-nav-item:nth-child(9) {
 
 prm-action-list md-nav-bar li.md-nav-item[name="apa"],
 prm-action-list md-nav-bar li.md-nav-item[name="chicagob"],
-prm-action-list md-nav-bar li.md-nav-item[name="mla7"] {
+prm-action-list md-nav-bar li.md-nav-item[name="harvard1"],
+prm-action-list md-nav-bar li.md-nav-item[name="mla7"],
+prm-action-list md-nav-bar li.md-nav-item[name="mla8"] {
   order: 0;
   display: list-item;
 }
