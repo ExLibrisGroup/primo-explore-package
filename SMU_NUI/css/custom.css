@@ -187,6 +187,11 @@ prm-personal-info > div:nth-child(2) {
   display: none;
 }
 
+/* Hide hyperlink for link resolver result with no hit. */
+prm-view-online > div:first-child {
+  display: none;
+}
+
 /* Styles for landing page content. */
 .start-here {
   width: 200px;
