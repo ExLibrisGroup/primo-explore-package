@@ -253,10 +253,19 @@ md-card .advert a:hover {
 }
 
 /* Styles for version number. */
-#version {
+.version-gt-xs {
   position: fixed;
   bottom: 2%;
   left: 2%;
+}
+
+.version-xs {
+  position: absolute;
+  right: 8px;
+}
+
+.version::after {
+  content: "v1.3";
   color: #eeeeee;
   z-index: 10;
 }
