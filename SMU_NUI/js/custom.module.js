@@ -104,7 +104,8 @@ app.controller('prmViewOnlineAfterController', [function () {
 
   vm.getLinks = function () {
     return vm.parentCtrl.getLinks().map(function (link) {
-      link.isUnresolvedLink = link.displayText === 'almaviewit_services' && link.getItTabText === 'tab1_viewit';
+      link.isUnresolvedLink = (link.displayText === 'almaviewit_services' && link.getItTabText === 'tab1_viewit') ||
+                              (link.displayText === 'Almagetit_remote' && link.getItTabText === 'alma_tab1_nofull');
       return link;
     });
   };
