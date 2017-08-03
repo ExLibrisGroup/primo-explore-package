@@ -95,7 +95,7 @@ app.component('prmPersonalInfoAfter', {
 });
 
 /**
- * Hide hyperlink for link resolver result with no hit.
+ * Hide hyperlink in full details when there is no full text.
  */
 app.controller('prmViewOnlineAfterController', [function () {
   var vm = this;
@@ -115,4 +115,57 @@ app.component('prmViewOnlineAfter', {
   bindings: { parentCtrl: '<' },
   controller: 'prmViewOnlineAfterController',
   template: '<div ng-repeat="link in $ctrl.getLinks()"><a ng-if="!link.isUnresolvedLink" class="arrow-link" href="{{link.link}}" target="_blank"><span ng-if="link.link.length>0" translate-default="{{link.hyperlinkText}}" translate="nui.getit_full.{{link.hyperlinkText}}"></span><prm-icon ng-if="link.link.length>0" external-link icon-type="{{$ctrl.availabilityLineIcons.externalLink.type}}" svg-icon-set="{{$ctrl.availabilityLineIcons.externalLink.iconSet}}" icon-definition="{{$ctrl.availabilityLineIcons.externalLink.icon}}"></prm-icon><prm-icon ng-if="link.link.length>0" link-arrow icon-type="{{$ctrl.availabilityLineIcons.arrowRight.type}}" svg-icon-set="{{$ctrl.availabilityLineIcons.arrowRight.iconSet}}" icon-definition="{{$ctrl.availabilityLineIcons.arrowRight.icon}}"></prm-icon></a><span ng-if="link.isUnresolvedLink" translate-default="{{link.hyperlinkText}}" translate="nui.getit_full.{{link.hyperlinkText}}"></span></div>'
+});
+
+/**
+ * Hide hyperlink in brief results when there is no full text.
+ */
+app.controller('prmSearchResultAvailabilityLineAfterController', [function () {
+  var vm = this;
+
+  Object.defineProperty(vm, 'availabilityLineIcons', { get() { return vm.parentCtrl.availabilityLineIcons; }});
+  Object.defineProperty(vm, 'displayedAvailability', { get() { return vm.parentCtrl.displayedAvailability; }});
+  Object.defineProperty(vm, 'result', { get() { return vm.parentCtrl.result; }});
+
+  vm.isOnline = function (e, t) {
+    return vm.parentCtrl.isOnline(e, t);
+  };
+
+  vm.isPhysical = function (e) {
+    return vm.parentCtrl.isPhysical(e);
+  };
+
+  vm.isFull = function () {
+    return vm.parentCtrl.isFull();
+  };
+
+  vm.handleAvailability = function (e, t) {
+    return vm.parentCtrl.handleAvailability(e, t);
+  };
+
+  vm.getTranslatedLine = function (e) {
+    return vm.parentCtrl.getTranslatedLine(e);
+  };
+
+  vm.getPlaceHolders = function () {
+    return vm.parentCtrl.getPlaceHolders();
+  };
+
+  vm.showDisplayOtherLocations = function () {
+    return vm.parentCtrl.showDisplayOtherLocations();
+  };
+
+  vm.isDirectLink = function (e) {
+    return vm.parentCtrl.isDirectLink(e);
+  };
+
+  vm.hasNoFullText = function () {
+    return vm.parentCtrl.displayedAvailability[0] === 'no_fulltext';
+  };
+}]);
+
+app.component('prmSearchResultAvailabilityLineAfter', {
+  bindings: { parentCtrl: '<' },
+  controller: 'prmSearchResultAvailabilityLineAfterController',
+  template: '<div ng-repeat="availability in $ctrl.displayedAvailability track by $index" layout="row" layout-align="start start"><prm-icon ng-if="$ctrl.isOnline($index,availability) && !$ctrl.hasNoFullText()" availability-type icon-type="{{::$ctrl.availabilityLineIcons.onlineMaterial.type}}" svg-icon-set="{{::$ctrl.availabilityLineIcons.onlineMaterial.iconSet}}" icon-definition="{{::$ctrl.availabilityLineIcons.onlineMaterial.icon}}"></prm-icon><prm-icon ng-if="$ctrl.isPhysical($index)" availability-type icon-type="{{::$ctrl.availabilityLineIcons.physicalMaterial.type}}" svg-icon-set="{{::$ctrl.availabilityLineIcons.physicalMaterial.iconSet}}" icon-definition="{{::$ctrl.availabilityLineIcons.physicalMaterial.icon}}"></prm-icon><md-button prm-brief-internal-button-marker ng-if="!$ctrl.isFull() && !$ctrl.hasNoFullText()" ng-click="$ctrl.handleAvailability($index, $event);$event.preventDefault();" class="neutralized-button arrow-link-button" title="{{::$ctrl.getTranslatedLine(\'delivery.code.\'+availability)}}"><span class="button-content"><span class="availability-status {{availability}}" translate="delivery.code.{{availability}}" translate-values="$ctrl.getPlaceHolders($ctrl.result)" translate-compile></span><span ng-if="$ctrl.showDisplayOtherLocations() && $ctrl.isPhysical($index)" translate="delivery.and.other.locations"></span><prm-icon ng-if="$ctrl.isDirectLink($index)" external-link icon-type="{{$ctrl.availabilityLineIcons.externalLink.type}}" svg-icon-set="{{$ctrl.availabilityLineIcons.externalLink.iconSet}}" icon-definition="{{$ctrl.availabilityLineIcons.externalLink.icon}}"></prm-icon></span><prm-spinner class="inline-loader display-inline dark-on-light half-transparent" ng-if="$ctrl.result.rtaInProgress"></prm-spinner><prm-icon link-arrow icon-type="{{::$ctrl.availabilityLineIcons.arrowRight.type}}" svg-icon-set="{{::$ctrl.availabilityLineIcons.arrowRight.iconSet}}" icon-definition="{{::$ctrl.availabilityLineIcons.arrowRight.icon}}"></prm-icon></md-button><md-button ng-if="$ctrl.hasNoFullText()" class="neutralized-button has-no-full-text"><span class="availability-status {{availability}}" translate="delivery.code.{{availability}}" translate-values="$ctrl.getPlaceHolders($ctrl.result)" translate-compile></span></md-button><span ng-if="$ctrl.isFull()"><span class="availability-status {{availability}}" translate="delivery.code.{{availability}}" translate-values="$ctrl.getPlaceHolders($ctrl.result)" (click)="$ctrl.handleAvailability($index, $event);" translate-compile></span><span ng-if="$ctrl.showDisplayOtherLocations() && $ctrl.isPhysical($index)" translate="delivery.and.other.locations"></span><span><prm-spinner class="inline-loader dark-on-light half-transparent" ng-if="$ctrl.result.rtaInProgress"></prm-spinner></span></span></div>'
 });

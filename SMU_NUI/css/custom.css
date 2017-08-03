@@ -187,9 +187,19 @@ prm-personal-info > div:nth-child(2) {
   display: none;
 }
 
-/* Hide hyperlink for link resolver result with no hit. */
+/* Hide hyperlink in full details when there is no full text. */
 prm-view-online > div:first-child {
   display: none;
+}
+
+/* Hide hyperlink in brief results when there is no full text. */
+prm-search-result-availability-line > div:first-child {
+  display: none;
+}
+
+button.neutralized-button.has-no-full-text {
+  padding-top: 2px;
+  cursor: auto;
 }
 
 /* Styles for landing page content. */
