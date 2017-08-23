@@ -193,7 +193,7 @@ prm-view-online > div:first-child {
 }
 
 /* Hide hyperlink in brief results when there is no full text. */
-prm-search-result-availability-line > div:first-child {
+prm-search-result-availability-line > div.layout-align-start-start.layout-row {
   display: none;
 }
 
