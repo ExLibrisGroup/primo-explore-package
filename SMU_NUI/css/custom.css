@@ -75,12 +75,6 @@ button[aria-label="Save/Email"] {
   display: none;
 }
 
-/* Hide availability line in full details. */
-.prm-full-view-dialog prm-search-result-availability-line,
-prm-full-view-service-container * prm-search-result-availability-line {
-  display: none;
-}
-
 /* Hide "Include records not in library collection" under "Tweak my results". */
 prm-facet div.sidebar-section.margin-top-small.margin-bottom-medium.compensate-padding-left {
   display: none;
