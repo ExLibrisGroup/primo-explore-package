@@ -269,7 +269,7 @@ md-card .advert a:hover {
 }
 
 .version::after {
-  content: "v1.4";
+  content: "v1.5";
   color: #eeeeee;
   z-index: 10;
 }
