@@ -13,7 +13,7 @@ prm-user-area .user-menu-button .user-name {
 }
 
 /* Change color of the A-Z search bar. */
-prm-journals-search-bar {
+prm-journals-search-bar, prm-atoz-search-bar {
   background-color: #102b72;
 }
 
