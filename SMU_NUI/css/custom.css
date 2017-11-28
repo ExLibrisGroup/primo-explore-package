@@ -146,8 +146,9 @@ button.mobile-menu-button[aria-label="Open user actions menu button"] {
   color: #102b72;
 }
 
-/* Hide availability status in journals A-Z brief results. */
-prm-journals prm-search-result-availability-line {
+/* Hide availability status in journal and database A-Z brief results. */
+prm-journals prm-search-result-availability-line,
+prm-databases prm-search-result-availability-line {
   display: none;
 }
 
