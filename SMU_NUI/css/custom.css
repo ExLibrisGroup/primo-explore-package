@@ -197,6 +197,17 @@ button.neutralized-button.has-no-full-text {
   cursor: auto;
 }
 
+/* Adjust background for collection header. */
+prm-collection-discovery prm-collection-gallery-header div.collection-header-inner {
+  background-color: #102b72;
+}
+
+/* Remove transparency from the menu bar when viewing a collection. */
+prm-explore-main .header prm-topbar.transparent-top-bar::before {
+  background-color: #f1f1f1;
+  opacity: 1;
+}
+
 /* Styles for landing page content. */
 .start-here {
   width: 200px;
