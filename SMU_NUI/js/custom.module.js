@@ -2,6 +2,15 @@
 ga('create', 'UA-65742450-2', 'auto');
 ga('send', 'pageview');
 
+/**
+ * Libchat Widget
+ */
+(function() {
+  var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = 'true';
+  lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'v2.libanswers.com/load_chat.php?hash=aa0a509ee211a898f337227a67f8b5ec';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+})();
+
 var app = angular.module('viewCustom', ['angularLoad']);
 
 /**
