@@ -1,6 +1,29 @@
+/**
+ * Google Verification Code
+ */
+(function() {
+  var vc1 = document.createElement('meta'); vc1.name = 'google-site-verification'; vc1.content = 'BhzRzZR70qdTQK6wY7hLE-3_4lrJOBU7xB6FlZR2cPA';
+  var vc2 = document.createElement('meta'); vc2.name = 'google-site-verification'; vc2.content = 'q_zQBRGhkd4d0qw7Q5UruEOi-yeaPuy8Z3kar8T1iJQ';
+  var s = document.getElementsByTagName('meta')[0]; s.parentNode.insertBefore(vc1, s);
+  s.parentNode.insertBefore(vc2, s);
+})();
+
+/**
+ * Google Analytics Code
+ */
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 ga('create', 'UA-65742450-2', 'auto');
 ga('send', 'pageview');
+
+
+/**
+ * Libchat Widget
+ */
+(function() {
+  var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = 'true';
+  lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'v2.libanswers.com/load_chat.php?hash=aa0a509ee211a898f337227a67f8b5ec';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+})();
 
 var app = angular.module('viewCustom', ['angularLoad']);
 
