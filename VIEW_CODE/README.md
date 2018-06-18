@@ -2,7 +2,7 @@
 # The Primo New UI Customization Workflow Development Environment
 
 
-##Package documentation
+## Package documentation
 
 The development package allows you to configure :
 
@@ -36,7 +36,7 @@ The development package allows you to configure :
 
   [JavaScript](./VIEW_CODE/js/README.md "javascript documentation")
 
-
+-  For `colors.json.txt` instructions - please see [CSS](./VIEW_CODE/css/README.md "css documentation") documentation
 
 
 

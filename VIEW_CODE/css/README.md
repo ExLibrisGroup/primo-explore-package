@@ -1,7 +1,7 @@
 # The Primo New UI Customization Workflow Development Environment
 
 
-##css documentation
+## css documentation
 
 - Primo uses Angular Directives massively in this project
 
@@ -72,7 +72,7 @@ prm-topbar.md-primoExplore-theme input {....}
 
 # css Recipe 1 - Color Scheme (Starting from August 2016 Release)
 
--  Open the `colors.json` file in the root of your view folder
+-  Open the `colors.json.txt` file in the root of your view folder
 -  You will see a json object with our default color scheme:
 
     ```
@@ -87,8 +87,9 @@ prm-topbar.md-primoExplore-theme input {....}
       "notice": "#e08303"
     }    
     ```
--  In the August 2016 release - we support the definition of the primary color, just change the definition and save the file
--  In the November 2016 release we plan to add support to the additional colors - giving you the ability to easily customize the majority of the color scheme.
+
+-  Since November 2016 release - we are giving you the ability to easily customize the majority of the following
+colors - primary, secondary, backgroundColor, links, warning, positive, negative, notice - just change the definition and save the file.
 
 The colors are mapped to different elements in the user interface:
 
@@ -100,10 +101,10 @@ The colors are mapped to different elements in the user interface:
 -  Run `gulp app-css --view <your-view/folder code>` for example:
         `gulp app-css --view Auto1`
 -  A new file will be created on your package css directory named: `app-colors.css`
--  This file will eventually contain all of the primo-explore theme color definitions.
+-  This file will contain all of the primo-explore theme color definitions.
     We will continue to add more color definitions to extend this ability
 - Refresh your browser to see the changes take affect
-- For example, for the following colors.json file:
+- For example, for the following `colors.json.txt` file:
 
 ```
 {

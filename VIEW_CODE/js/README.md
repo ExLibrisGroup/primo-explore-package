@@ -1,7 +1,7 @@
 # The Primo New UI Customization Workflow Development Environment
 
 
-##JavaScript documentation
+## JavaScript documentation
 
 - When you want to add functionality to your Primo installation you will be using Angular Directives.
 
@@ -41,10 +41,10 @@ Example:
 
 
 
-##Concept
+## Concept
 
-- When You want to add your own JavaScript functionality - you will need to plug-in to placeholder Directives we added to the system.
-- Those directive are added as the last child element for every Primo directive (defined by the `prm-` prefix)
+- When You want to add your own JavaScript functionality - you will need to plug-in to placeholder Directives we added to the system, by creating your own placeholder Directive.
+- Those directives are added as the last child element for every Primo directive (defined by the `prm-` prefix)
 - The placeholder directives are injected (as input) with the Controller of their parent, thus have access to the data model of the parent directive
 - Use the examples below as starting points for your JavaScript plug-in directives
 - Learn about Angular Directives to better understand the different abilities this workflow offers
@@ -52,14 +52,14 @@ Example:
 
 
 
-##Recipes/Examples:
+## Recipes/Examples:
 
 # Note:
 
 The examples below use the back tic '`' for templates - which will work using babel (Documentation on how to do so will be shared)
 This causes the examples to fail on IE11 browsers.
 
-To solve this you can replace the '`' with regular apostrophe ("'") and use a single line tempalate (less readable but works just as well).
+To solve this you can replace the '`' with regular apostrophe ("'") and use a single line template (less readable but works just as well).
 
 
 
@@ -73,9 +73,15 @@ To solve this you can replace the '`' with regular apostrophe ("'") and use a si
 
 ![Show Directives image](../../help_files/showDirectives.png "Show Directives Changes")
 
--  Edit the primo-explore/custom/js/custom.js file and add a component declaration for the `prmSearchBarAfter` directive
+-  Edit the primo-explore/custom/js/custom.js file and add a component declaration for `myInstitutionComponent` and a component declaration 
+for the `prmSearchBarAfter` directive
 
     ```
+    app.component('myInstitutionComponent', {
+    
+    
+    });
+    
     app.component('prmSearchBarAfter', {
 
 
@@ -84,11 +90,19 @@ To solve this you can replace the '`' with regular apostrophe ("'") and use a si
 -  Add the template property with your static message
 
     ```
-    app.component('prmSearchBarAfter', {
+    app.component('myInstitutionComponent', {
         template: `<span style="margin-left: 40%;">Hello World</span>`
-
     });
     ```
+-  Add the template property with your component template (myInstitutionComponent) 
+    
+    ```
+    app.component('prmSearchBarAfter', {
+            bindings: {parentCtrl: `<`},
+            template: `<my-institution-component></my-institution-component>`    
+    });
+    ```
+        
 
 -  Save and refresh your browser
 
@@ -114,19 +128,19 @@ To solve this you can replace the '`' with regular apostrophe ("'") and use a si
 ![properties image](../../help_files/js3.png "properties")
 
 
-- Edit  primo-explore/custom/js/custom.js file and add a component declaration for the `prmSearchBarAfter` directive
+- Edit  primo-explore/custom/js/custom.js file and add: a component declaration for the `prmSearchBarAfter` directive, and a component declaration for the `myInstitutionComponent`
 
-- Add a binding definition the input parentCtrl
+- Add a binding definition the input parentCtrl for both components
 ```
     bindings: {parentCtrl: '<'},
 ```
-- Add a controller definition:
+- Add a controller definition for the `myInstitutionComponent` component:
 ```
-    controller: 'SearchBarAfterController',
+    controller: 'MyInstitutionComponentController',
 ```
 - Define a controller with 2 getter methods to return the query and selected scope
 ```
-app.controller('SearchBarAfterController', [function () {
+app.controller('MyInstitutionComponentController', [function () {
         var vm = this;
 
 
@@ -144,7 +158,11 @@ app.controller('SearchBarAfterController', [function () {
     }]);
 
 ```
--  Edit the directive template to reference the getter methods
+-  Edit the `prmSearchBarAfter` directive template to reference the `myInstitutionComponent`
+```
+template: `<my-institution-component parent-ctrl="$ctrl.parentCtrl"></my-institution-component>`
+``` 
+-  Edit the `myInstitutionComponent` directive template to reference the getter methods
 ```
 template: `<div layout="row" layout-align="center center">
                          <md-card flex="80">
@@ -186,23 +204,19 @@ template: `<div layout="row" layout-align="center center">
 
 ![Altmetrics example 2 image](../../help_files/js6.png "Altmetrics 2 example")
 
-- Edit  primo-explore/custom/js/custom.js file and add a component declaration for the `prmFullViewAfter` directive
+- Edit  primo-explore/custom/js/custom.js file and add: a component declaration for the `prmFullViewAfter` directive, and a component declaration for the `myInstitutionComponent`
 
-- Add a binding definition the input parentCtrl
-
+- Add a binding definition the input parentCtrl for both components
 ```
     bindings: {parentCtrl: '<'},
 ```
-- Add a controller definition:
-
+- Add a controller definition for the `myInstitutionComponent` component:
 ```
-    controller: 'FullViewAfterController',
+    controller: 'MyInstitutionComponentController',
 ```
-
 - Define a controller that populates the doi and loads the Altmetrics js file
-
 ```
-app.controller('FullViewAfterController', ['angularLoad', function (angularLoad) {
+app.controller('MyInstitutionComponentController', ['angularLoad', function (angularLoad) {
         var vm = this;
         vm.doi = vm.parentCtrl.item.pnx.addata.doi[0] || '';
 
@@ -213,11 +227,15 @@ app.controller('FullViewAfterController', ['angularLoad', function (angularLoad)
         };
     }]);
 ```
-- Edit the directive template to add the Altmetrics div and bind the data-doi attribute to the controller
+-  Edit the `prmFullViewAfter` directive template to reference the `myInstitutionComponent`
 ```
-app.component('prmFullViewAfter', {
+template: `<my-institution-component parent-ctrl="$ctrl.parentCtrl"></my-institution-component>`
+``` 
+- Edit the `myInstitutionComponent` directive template to add the Altmetrics div and bind the data-doi attribute to the controller
+```
+app.component('myInstitutionComponent', {
         bindings: {parentCtrl: '<'},
-        controller: 'FullViewAfterController',
+        controller: 'MyInstitutionComponentController',
         template: `<div class="full-view-section loc-altemtrics" flex-md="65" flex-lg="65" flex-xl="65" flex>
                     <div class="layout-full-width full-view-section-content" ng-if="$ctrl.doi">
                     <div class="section-header" layout="row" layout-align="center center">
