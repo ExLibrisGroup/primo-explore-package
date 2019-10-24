@@ -54,7 +54,13 @@
        <span ng-if="item.pnx.addata.oclcid" atyle="">OCLCID: </span>
        <div dir="auto" ng-repeat="oclcid in item.pnx.addata.oclcid">{{oclcid}}</div>
  ```
-                            
+        
+        
+        
+ Full examples of email templates can be found in this folder:
+    >> email_en_US-brief+additionalField+availability.html
+    >> email_en_US_Details.html
+ 
  
 
 
