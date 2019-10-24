@@ -1,7 +1,7 @@
 # The Primo New UI Customization Workflow Development Environment
 
 
-##html documentation
+## html documentation
 
  - In this folder you will find static html files in their OTB state
  - The files are separated into directories (starting from the November 2016 Release)
@@ -21,6 +21,40 @@
  > https://material.angularjs.org/latest/
 
 
+## Email templates
+  Starting from 2020 Primo supports a new html template to customize email messages sent to patrons'.
+  
+  To customize this template create a file named email_fr_FR.html (based on your language suffix) and upload it using the html directory in your customization package.
+  
+  In this html file you can design your own email template using html.
+  
+  When editing the template you can:
+  
+  1. Use regular html (use best practices for email templating: https://mailchimp.com/help/about-html-email/) to design the layout of your email based on your preferences.
+  
+  2. You can take advantage of some of our OTB directives in your templates:
+      ```
+      <prm-brief-result
+             class="result-item-details"
+             [item]="item"
+             [is-email]="true"
+             layout="column">
+     </prm-brief-result>
 
+
+    <prm-search-result-availability-line tabindex="-1" [result]="item" [is-email]="true"></prm-search-result-availability-line>
+
+    <prm-logo style="height: 66px;"></prm-logo>
+
+    <prm-service-details [item]="item" [is-email]="true"></prm-service-details>```
+ 3. You can reference the sent item(pnx/record) using angular syntax to present the relevant data:
+ 
+ ```
+    <div style="font-weight: 600;margin-top:2em;"> Additional Information From the Record:</div>
+       <span ng-if="item.pnx.addata.oclcid" atyle="">OCLCID: </span>
+       <div dir="auto" ng-repeat="oclcid in item.pnx.addata.oclcid">{{oclcid}}</div>
+ ```
+                            
+ 
 
 
