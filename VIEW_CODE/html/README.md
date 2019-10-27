@@ -62,10 +62,19 @@
         
         
         
- Full examples of email templates can be found in this folder:
+ Full examples of email templates can be found in the help files folder folder:
     >> email_en_US-brief+additionalField+availability.html
+    will produce the following email:
+    ![example brief](../../help_files/email_en_US-brief+additionalField+availability.html "example brief")
+    
     >> email_en_US_Details.html
+    will produce the following email:
+    
+    ![example details](../../help_files/email_en_US_Details.html "example details")
  
- 
+    >> email_en_US-External-template.html
+    will produce the following email:
+    
+    ![example external](../../help_files/email_en_US-External-template.html "example external")
 
 
