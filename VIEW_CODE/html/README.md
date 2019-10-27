@@ -63,16 +63,16 @@
    1. email_en_US-brief+additionalField+availability.html
     will produce the following email:
    
-   ![example brief](../../help_files/email_en_US-brief+additionalField+availability.html "example brief")
+   ![example brief](../../help_files/example-bried-and-subject.png "example brief")
     
    2. email_en_US_Details.html
     will produce the following email:
     
-   ![example details](../../help_files/email_en_US_Details.html "example details")
+   ![example details](../../help_files/example-details-and-additional.png "example details")
  
    3. email_en_US-External-template.html
     will produce the following email:
     
-   ![example external](../../help_files/email_en_US-External-template.html "example external")
+   ![example external](../../help_files/example-external.png "example external")
 
 
