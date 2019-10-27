@@ -1,0 +1,838 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <!-- For Windows Phone 8. See http://bit.ly/1u4tj4v - Windows Phone 8 strips out DOCTYPE and renders emails in IE 5 mode by DEFAULT -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <style>body {
+        padding: 0;
+        margin: 0;
+        font-family: -apple-system, ".SFNSDisplay-Regular", Roboto, Helvetica, Tahoma, sans-serif
+    }
+
+    a {
+        color: #168DD9;
+        text-decoration: none
+    }
+
+    figure {
+        margin: 0
+    }
+
+    figure img {
+        width: 100%
+    }
+
+    figcaption {
+        text-align: right
+    }
+
+    table {
+        border: 0;
+        border-spacing: 0;
+        border-collapse: separate;
+        padding: 0
+    }
+
+    #obsession-container {
+        max-width: 768px;
+        margin: auto;
+        background-color: #f1f1f1
+    }
+
+    #obsession-header {
+        position: relative;
+        background-color: #000;
+        background-size: cover;
+        width: 100%;
+        height: 330px
+    }
+
+    #obsession-header-content {
+        height: 100%;
+        vertical-align: middle;
+        text-align: center;
+        color: #fff
+    }
+
+    #obsession-header-content img {
+        max-width: 200px
+    }
+
+    #obsession-header-date {
+        font-size: 14px
+    }
+
+    #obsession-sponsor {
+        color: #fff;
+        font-size: 10px;
+        text-align: right;
+        padding: 5px 10px 0 0;
+        height: 30px;
+        line-height: 30px
+    }
+
+    #obsession-sponsor img {
+        vertical-align: middle;
+        width: 90px;
+        margin-left: 5px
+    }
+
+    .obsession-hero {
+        margin: 0;
+        position: relative
+    }
+
+    .obsession-hero figcaption {
+        font-size: 8px;
+        text-align: right;
+        color: #bebebe;
+        padding: 0 6px 5px 0
+    }
+
+    .obsession-hero table {
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px
+    }
+
+    .obsession-hero table td {
+        padding: 0 15%
+    }
+
+    .obsession-hero + .obsession-card-content {
+        border-top-right-radius: 0;
+        border-top-left-radius: 0
+    }
+
+    .poll .obsession-hero td {
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px
+    }
+
+    .poll .obsession-hero-image {
+        padding: 0;
+        height: 200px
+    }
+
+    .poll input {
+        display: none
+    }
+
+    .quiz .obsession-hero td {
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px
+    }
+
+    .quiz .obsession-hero-image {
+        padding: 0;
+        height: 200px
+    }
+
+    .quiz input {
+        display: none
+    }
+
+    .quiz .obsession-quiz-message-correct {
+        display: none
+    }
+
+    .quiz .obsession-quiz-message-wrong {
+        display: none
+    }
+
+    .quiz .obsession-quiz-radio-correct:checked ~ .obsession-quiz-message-correct {
+        display: block
+    }
+
+    .quiz .obsession-quiz-radio-wrong:checked ~ .obsession-quiz-message-wrong {
+        display: block
+    }
+
+    .quiz .obsession-quiz-radio-wrong:checked ~ .obsession-quiz-answer.correct {
+        background: green
+    }
+
+    .quiz .obsession-quiz-answer.correct:hover {
+        background: green
+    }
+
+    .quiz .obsession-quiz-answer.correct:hover ~ .obsession-quiz-message-correct {
+        display: block
+    }
+
+    .quiz .obsession-quiz-answer.wrong:hover {
+        background: red
+    }
+
+    .quiz .obsession-quiz-answer.wrong:hover ~ .obsession-quiz-message-wrong {
+        display: block
+    }
+
+    .obsession-hero-title {
+        color: #fff;
+        margin: 0 auto;
+        font-size: 22px
+    }
+
+    .obsession-hero-image {
+        width: 100%;
+        padding-bottom: 56.56%;
+        background-color: #ccc;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        border-radius: 6px
+    }
+
+    .obsession-hero-image table {
+        width: 100%;
+        height: 100%
+    }
+
+    .obsession-hero-image table td {
+        text-align: center;
+        vertical-align: middle
+    }
+
+    .obsession-hero-image .play-button {
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat
+    }
+
+    .video .obsession-hero-image {
+        padding: 0;
+        height: 200px
+    }
+
+    .obsession-card {
+        margin: 20px 15px;
+        font-size: 15px;
+        max-width: 500px
+    }
+
+    .obsession-card:first-of-type {
+        position: relative;
+        margin-top: -25px
+    }
+
+    .obsession-card .obsession-card-cta {
+        color: #fff
+    }
+
+    .referral {
+        background-color: #168DD9;
+        border-radius: 6px
+    }
+
+    .obsession-referral-content {
+        padding: 20px
+    }
+
+    .obsession-referral-card-title {
+        font-size: 22px;
+        font-weight: bold;
+        color: #fff;
+        margin-top: 0
+    }
+
+    .obsession-referral-card-subject {
+        color: #000
+    }
+
+    .obsession-referral-card-link {
+        padding: 20px;
+        background-color: #fff;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: center
+    }
+
+    .obsession-referral-card-link a {
+        color: #000
+    }
+
+    .obsession-referral-card-forward {
+        padding: 20px;
+        background-color: #000;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: center;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px
+    }
+
+    .obsession-referral-card-forward a {
+        color: #fff
+    }
+
+    .has-content .obsession-hero-image {
+        border-radius: 6px 6px 0 0
+    }
+
+    .obsession-card-kicker {
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #bebebe;
+        margin-bottom: 5px
+    }
+
+    .obsession-card-sponsor-label {
+        color: #F1A33F
+    }
+
+    .obsession-card-title {
+        font-weight: bold;
+        font-size: 22px;
+        max-width: 70%;
+        margin-top: 0
+    }
+
+    .obsession-card-title hr {
+        width: 140px;
+        border-bottom: 4px solid #000;
+        margin: 10px 0 0 0
+    }
+
+    .obsession-card-content {
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 6px
+    }
+
+    .obsession-card-content img {
+        max-width: 100%
+    }
+
+    .obsession-card-content figure {
+        margin: 0
+    }
+
+    .obsession-card-content figcaption {
+        font-size: 8px;
+        text-align: right;
+        color: #bebebe
+    }
+
+    .obsession-card-content p {
+        margin: 1em 0;
+        line-height: 1.5
+    }
+
+    .obsession-card-content p.first {
+        margin-top: 0
+    }
+
+    .obsession-card-content p.last {
+        margin-bottom: 0
+    }
+
+    .obsession-card-content ul {
+        padding: 0 0 0 18px
+    }
+
+    .obsession-card-content ol {
+        padding: 0 0 0 18px
+    }
+
+    .obsession-card-content li {
+        margin: 0 0 5px 0
+    }
+
+    .obsession-card-content blockquote {
+        margin: 1em 0;
+        font-family: Georgia, serif;
+        font-style: italic
+    }
+
+    .obsession-card-content .pull-quote {
+        margin: 1em 0;
+        font-family: Georgia, serif;
+        font-style: italic;
+        font-size: 21px;
+        line-height: 1.5;
+        color: #5D5D5D
+    }
+
+    .obsession-card-content .pull-quote .quote-line {
+        display: none
+    }
+
+    .obsession-card-cta {
+        display: block;
+        background-color: #168DD9;
+        color: #fff;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+        font-size: 14px;
+        text-align: center;
+        padding: 18px 0;
+        text-decoration: none
+    }
+
+    .obsession-card-share {
+        font-size: 12px;
+        color: #A7A7A7;
+        width: 100%;
+        padding: 6px 6px 0 6px
+    }
+
+    .obsession-card-share .share-buttons {
+        text-align: right
+    }
+
+    .obsession-card-share .share-buttons a {
+        margin-left: 10px
+    }
+
+    .obsession-poll-answer {
+        display: block;
+        background-color: #fff;
+        margin: 0 15px 3px 15px;
+        padding: 15px 20px;
+        font-size: 15px;
+        font-weight: bold;
+        position: relative;
+        cursor: pointer
+    }
+
+    .obsession-poll-answer:first-of-type {
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        margin-top: -25px
+    }
+
+    .obsession-poll-answer:last-of-type {
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px
+    }
+
+    .obsession-quiz-answer {
+        display: block;
+        background-color: #fff;
+        margin: 0 15px 3px 15px;
+        padding: 15px 20px;
+        font-size: 15px;
+        font-weight: bold;
+        position: relative;
+        cursor: pointer
+    }
+
+    .obsession-quiz-answer:first-of-type {
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        margin-top: -25px
+    }
+
+    .obsession-quiz-answer:last-of-type {
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px
+    }
+
+    .obsession-quiz-message-correct {
+        display: none;
+        font-size: 15px;
+        margin: 15px
+    }
+
+    .obsession-quiz-message-wrong {
+        display: none;
+        font-size: 15px;
+        margin: 15px
+    }
+
+    .obsession-poll-message {
+        display: none;
+        font-size: 15px;
+        margin: 15px
+    }
+
+    .obsession-quiz-fallback {
+        text-align: center;
+        color: #bebebe;
+        padding: 5px 0 0 0;
+        font-size: 10px
+    }
+
+    .obsession-quiz-footer-fallback {
+        text-align: left;
+        color: #bebebe;
+        padding: 10px 0;
+        font-size: 10px;
+        max-width: 460px;
+        margin: auto
+    }
+
+    .obsession-gallery {
+        background-color: #fff;
+        text-align: center;
+        display: table;
+        width: 100%
+    }
+
+    .obsession-gallery input {
+        display: none
+    }
+
+    .obsession-gallery label {
+        display: inline-block;
+        margin: 10px 5px;
+        cursor: pointer;
+        max-width: 50px
+    }
+
+    .obsession-gallery label img {
+        width: 100%
+    }
+
+    .obsession-gallery-images {
+        display: table-caption;
+        caption-side: top;
+        table-layout: fixed
+    }
+
+    .obsession-gallery-images img {
+        width: 100%;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px
+    }
+
+    #obsession-footer {
+        background-color: #2B2B2B;
+        margin-top: 40px;
+        padding: 0 15px
+    }
+
+    #obsession-share-footer {
+        background-color: #000;
+        padding: 0 15px
+    }
+
+    #obsession-share-footer table {
+        width: 100%;
+        color: #fff;
+        font-size: 12px
+    }
+
+    #obsession-share-footer .share-buttons {
+        text-align: right
+    }
+
+    #obsession-share-footer .share-buttons a {
+        margin-left: 10px
+    }
+
+    #obsession-share-footer .obsession-card-share {
+        padding: 0
+    }
+
+    .obsession-footer-content {
+        max-width: 460px;
+        margin: auto;
+        font-size: 12px;
+        color: #fff;
+        padding: 15px 0
+    }
+
+    .obsession-footer-content p {
+        margin: 0 0 15px 0
+    }
+
+    .obsession-footer-content .last {
+        margin: 0
+    }
+
+    .outlook-card {
+        margin-bottom: 20px;
+        background-color: #fff
+    }
+
+    .outlook-card .obsession-card-title {
+        max-width: none
+    }
+
+    .outlook-card hr {
+        display: none !important
+    }
+
+    .outlook-card td {
+        padding: 30px
+    }
+
+    .outlook-card h3 {
+        font-size: 15px
+    }
+
+    .outlook-card .warning {
+        color: #ccc;
+        font-size: 10px
+    }
+
+    .outlook-cta {
+        background-color: #168DD9;
+        text-align: center;
+        width: 100%
+    }
+
+    .outlook-cta td {
+        padding: 30px
+    }
+
+    .outlook-cta a {
+        color: #fff;
+        text-decoration: none
+    }
+
+    .hidden {
+        display: none;
+        mso-hide: all;
+        height: 0;
+        line-height: 0;
+        font-size: 0px;
+        overflow: hidden
+    }
+
+    .hidden table {
+        display: none !important;
+        mso-hide: all !important
+    }
+
+    @media screen and (max-width: 600px) {
+        .body {
+            width: 100vw
+        }
+
+        .obsession-quiz-fallback {
+            font-size: 8px
+        }
+
+        .obsession-quiz-footer-fallback {
+            font-size: 8px
+        }
+    }
+
+    @media screen and (min-width: 376px) {
+        .poll .obsession-hero-image {
+            height: 282px
+        }
+
+        .quiz .obsession-hero-image {
+            height: 282px
+        }
+
+        .video .obsession-hero-image {
+            height: 282px
+        }
+    }
+
+    @media screen and (min-width: 531px) {
+        .obsession-card {
+            margin: 20px auto
+        }
+
+        #obsession-footer {
+            padding: 0
+        }
+
+        #obsession-share-footer {
+            padding: 0
+        }
+    }
+
+    @media screen and (min-width: 600px) {
+        .obsession-card-title {
+            max-width: 50%
+        }
+    }
+
+    .play-button {
+        background-image: url(https://cms.qz.com/wp-content/themes/qz-api/lib/plugins/qz-email/emails/quartz-obsession/images/play.png);
+    }
+
+    #quiz-4-answer-radio-correct:checked ~ .obsession-quiz-answer.correct {
+        background: green;
+    }
+
+    #quiz-4-answer-radio-1:checked ~ #qz-4-answer-label-1 {
+        background: red;
+    }
+
+    #quiz-4-answer-radio-2:checked ~ #qz-4-answer-label-2 {
+        background: red;
+    }
+
+    #quiz-4-answer-radio-3:checked ~ #qz-4-answer-label-3 {
+        background: red;
+    }
+
+    #poll-10439760-radio-48188738:checked ~ #poll-10439760-answer-48188738 {
+        background-image: url(https://quartz-obsession.quartz.work/vote?poll_id=10439760&answer_id=48188738)
+    }
+
+    #poll-10439760-radio-48188738:checked ~ #poll-10439760-answer-48188739 {
+        background-image: url(https://quartz-obsession.quartz.work/result?poll_id=10439760&answer_id=48188739)
+    }
+
+    #poll-10439760-radio-48188738:checked ~ #poll-10439760-answer-48188740 {
+        background-image: url(https://quartz-obsession.quartz.work/result?poll_id=10439760&answer_id=48188740)
+    }
+
+    #poll-10439760-radio-48188738:checked ~ #poll-10439760-answer-48188741 {
+        background-image: url(https://quartz-obsession.quartz.work/result?poll_id=10439760&answer_id=48188741)
+    }
+
+    #poll-10439760-radio-48188739:checked ~ #poll-10439760-answer-48188739 {
+        background-image: url(https://quartz-obsession.quartz.work/vote?poll_id=10439760&answer_id=48188739)
+    }
+
+    #poll-10439760-radio-48188739:checked ~ #poll-10439760-answer-48188738 {
+        background-image: url(https://quartz-obsession.quartz.work/result?poll_id=10439760&answer_id=48188738)
+    }
+
+    #poll-10439760-radio-48188739:checked ~ #poll-10439760-answer-48188740 {
+        background-image: url(https://quartz-obsession.quartz.work/result?poll_id=10439760&answer_id=48188740)
+    }
+
+    #poll-10439760-radio-48188739:checked ~ #poll-10439760-answer-48188741 {
+        background-image: url(https://quartz-obsession.quartz.work/result?poll_id=10439760&answer_id=48188741)
+    }
+
+    #poll-10439760-radio-48188740:checked ~ #poll-10439760-answer-48188740 {
+        background-image: url(https://quartz-obsession.quartz.work/vote?poll_id=10439760&answer_id=48188740)
+    }
+
+    #poll-10439760-radio-48188740:checked ~ #poll-10439760-answer-48188738 {
+        background-image: url(https://quartz-obsession.quartz.work/result?poll_id=10439760&answer_id=48188738)
+    }
+
+    #poll-10439760-radio-48188740:checked ~ #poll-10439760-answer-48188739 {
+        background-image: url(https://quartz-obsession.quartz.work/result?poll_id=10439760&answer_id=48188739)
+    }
+
+    #poll-10439760-radio-48188740:checked ~ #poll-10439760-answer-48188741 {
+        background-image: url(https://quartz-obsession.quartz.work/result?poll_id=10439760&answer_id=48188741)
+    }
+
+    #poll-10439760-radio-48188741:checked ~ #poll-10439760-answer-48188741 {
+        background-image: url(https://quartz-obsession.quartz.work/vote?poll_id=10439760&answer_id=48188741)
+    }
+
+    #poll-10439760-radio-48188741:checked ~ #poll-10439760-answer-48188738 {
+        background-image: url(https://quartz-obsession.quartz.work/result?poll_id=10439760&answer_id=48188738)
+    }
+
+    #poll-10439760-radio-48188741:checked ~ #poll-10439760-answer-48188739 {
+        background-image: url(https://quartz-obsession.quartz.work/result?poll_id=10439760&answer_id=48188739)
+    }
+
+    #poll-10439760-radio-48188741:checked ~ #poll-10439760-answer-48188740 {
+        background-image: url(https://quartz-obsession.quartz.work/result?poll_id=10439760&answer_id=48188740)
+    }
+
+    .vote-options {
+        display: none;
+    }
+
+    #poll-12-vote-control:checked ~ .vote-btn {
+        display: none;
+    }
+
+    #poll-12-vote-control:checked ~ .vote-options {
+        display: block;
+    }
+
+    #obsession-header td {
+        background: url(https://cms.qz.com/wp-content/themes/qz-api/lib/plugins/qz-email/emails/quartz-obsession/images/1x1-black.png);
+    }
+
+    .obsession-hero-image td {
+        background: url(https://cms.qz.com/wp-content/themes/qz-api/lib/plugins/qz-email/emails/quartz-obsession/images/1x1-purple.png);
+    }
+    </style>
+</head>
+
+
+<body class="body">
+
+
+<table width="600" bgcolor="#f1f1f1" align="center" ng-if="$ctrl.parentCtrl.fullViewLoaded"
+       ng-repeat="item in $ctrl.parentCtrl.delayedItems">
+    <tr>
+        <td>
+
+<div id="obsession-container">
+    <a href="http://email-tracking.qz.com/wf/click?upn=pu9n0ps8hGF44zTMfA2zQU0GkxgAXkprbeX5p14xE2g-2BX3uAQ-2B0cwL7FU-2BRdBUVHDtb5-2B3TLUWlvEfnEBCyYm1ol4JabLQLgMnW6r095clqw5f7Gsleg-2BB-2BJfLTKrJ7ewLNh-2B7cHp26aZXJi31hRHw-3D-3D_jk7xktPgXcVKAVfvg-2FHUIlXUg-2FQ-2F1ys5A2iiw31eMbPrhR05HH-2FL674yc8p-2B54DLy-2BngwR7Uae-2FbVrTCqOFXpLg2bwVCtcsKOkDYs0ErUxSzcfvoiDzYUGwI4t1egNhur6Pbr0ZUMvr61GY-2BdkV3siExGoDdahFY5e1caaX1S6dbCWCIVHY4MZQzo6v6SaZyypS1oLM8qFXj8XUBoEPKe8Hl13FuCRYxxnml5SkFQ5-2FLDsgxZpg2L-2FR2QqM2jkKD6aTmOfJ8mr9YGocXXFqCa5Sjc1nABt-2Bnvd7qMO6jDiQMihTosArNQvs91tCvP3EqZYU25S0ymSGGSO3Ro0U8NDswWolnxdnjy8iD1u6lZLuedstdPnJvbgmzD4oC-2FZeQHtMnJvk9ghkTw3ene925bUDfaCzQDlDo8Ue3FU-2F1PFeeb25pEksDn3hsVn9yaZkPj4hrvprqsv9vaxTyL06Ss5KNE1SrSU55xooOGend-2B2GWA3TjlEqZug3G4rb447hsOAZSEClonj4Qqb6-2BPCunsA-3D-3D"
+       target="_blank">
+        <table id="obsession-header"
+               style="background-image: url(https://cms.qz.com/wp-content/uploads/2019/10/green-static-obsession.gif?w=620); background-position: 50% 50%;">
+            <tr>
+                <td id="obsession-header-content">
+                    <h1 id="obsession-header-title">
+                        <a
+                                data-emailref="{{::item.control.recordId}}"
+                                href="">
+                            {{item.pnx.display.title[0]}}
+                        </a>
+                    </h1><span id="obsession-header-date">{{item.pnx.display.creationdate[0]}}</span>
+                </td>
+            </tr>
+        </table>
+    </a>
+
+            <table class="outlook-cta">
+                <tr>
+            <td>
+                <div class="obsession-card-content">
+                    <h2 class="obsession-card-title">Details
+                        <hr/>
+                    </h2>
+                    <p class="first">
+                        {{item.pnx.display.description[0]}}
+                    </p>
+
+                    <p>
+                    <p class="first">
+                        {{item.pnx.display.abstract[0]}}
+                        </p>
+
+                    <p>🐦 <a
+                            href=""
+                            target="_blank">Tweet this!</a></p>
+
+                </div>
+            </td>
+        </tr>
+    </table>
+    <table class="outlook-cta">
+        <tr>
+            <td>
+                <a
+                        data-emailref="{{item.pnx.control.recordid[0]}}"
+                        href="">
+                Link to Record
+                </a>
+            </td>
+        </tr>
+    </table>
+    <table class="outlook-ca">
+        <tr>
+            <td><h3>Disclaimer</h3>
+                <p class="warning">
+                    <b>Note:</b> {{$ctrl.parentCtrl.note}}
+                </p>
+            </td>
+        </tr>
+    </table>
+
+
+    <div id="obsession-footer">
+        <prm-footer></prm-footer>
+    </div>
+
+</div>
+
+</body>
+</html>
+
