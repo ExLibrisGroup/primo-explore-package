@@ -49,31 +49,30 @@
  3. You can reference the sent item(pnx/record) using angular syntax to present the relevant data:
  
   use the curly brackets to access the pnx diectly - for example: 
-   ```{{item.pnx.display.title}} ```
-  or loop over values using the ng-repeat directive to add multiple fields: 
-   ```<div dir="auto" ng-repeat="oclcid in     item.pnx.addata.oclcid">
- 
+   ```{{item.pnx.display.title}}```
+  or loop over values using the ng-repeat directive to add multiple fields:
+  
+      <div dir="auto" ng-repeat="oclcid in     item.pnx.addata.oclcid">
       <div style="font-weight: 600;margin-top:2em;"> Additional Information From the Record:</div>
       <span ng-if="item.pnx.addata.oclcid" atyle="">OCLCID: </span>
-      <div dir="auto" ng-repeat="oclcid in item.pnx.addata.oclcid">{{oclcid}}</div>```
-      ``````
+      <div dir="auto" ng-repeat="oclcid in item.pnx.addata.oclcid">{{oclcid}}</div>
       
-## Examples        
+ ## Examples        
         
  Full examples of email templates can be found in the help files folder folder:
-    1. email_en_US-brief+additionalField+availability.html
+   1. email_en_US-brief+additionalField+availability.html
+    will produce the following email:
+   
+   ![example brief](../../help_files/email_en_US-brief+additionalField+availability.html "example brief")
+    
+   2. email_en_US_Details.html
     will produce the following email:
     
-    ![example brief](../../help_files/email_en_US-brief+additionalField+availability.html "example brief")
-    
-    2. email_en_US_Details.html
-    will produce the following email:
-    
-    ![example details](../../help_files/email_en_US_Details.html "example details")
+   ![example details](../../help_files/email_en_US_Details.html "example details")
  
-    3. email_en_US-External-template.html
+   3. email_en_US-External-template.html
     will produce the following email:
     
-    ![example external](../../help_files/email_en_US-External-template.html "example external")
+   ![example external](../../help_files/email_en_US-External-template.html "example external")
 
 
