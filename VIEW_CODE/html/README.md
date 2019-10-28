@@ -60,7 +60,7 @@
  
 
 
-**Notice :** Any other link in your template will be removed - for security reasons, we will not allow links other than the link to the record to avoid email exploits.
+**Notice :** Any link in your template will be removed - for security reasons, we will not allow links other than the link to the record to avoid email exploits.
 
 
  ## Examples        
