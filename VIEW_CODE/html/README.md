@@ -60,17 +60,17 @@
  ## Examples        
         
  Full examples of email templates can be found in the help files folder folder:
-   1. email_en_US-brief+additionalField+availability.html
+   1. [A template based on the OTB - brief + custom fields + availability](../../help_files/email_en_US-brief+additionalField+availability.html)
     will produce the following email:
    
    ![example brief](../../help_files/example-bried-and-subject.png "example brief")
     
-   2. email_en_US_Details.html
+   2. [A template based on the OTB - details + custom fields + availability](../../help_files/email_en_US_Details.html)
     will produce the following email:
     
    ![example details](../../help_files/example-details-and-additional.png "example details")
  
-   3. email_en_US-External-template.html
+   3. [A template based on an open source email template with no Primo directives - just use of the ```{{item.pnx.display.title}}```](../../help_files/email_en_US_Details.html)
     will produce the following email:
     
    ![example external](../../help_files/example-external.png "example external")
