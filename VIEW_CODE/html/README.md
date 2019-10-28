@@ -57,8 +57,7 @@
       <div dir="auto" ng-repeat="oclcid in     item.pnx.addata.oclcid">
       <div style="font-weight: 600;margin-top:2em;"> Additional Information From the Record:</div>
       <span ng-if="item.pnx.addata.oclcid" atyle="">OCLCID: </span>
-      <div dir="auto" ng-repeat="oclcid in item.pnx.addata.oclcid">{{oclcid}}</div>
- ```
+      <div dir="auto" ng-repeat="oclcid in item.pnx.addata.oclcid">{{oclcid}}</div>```
  
 
 
