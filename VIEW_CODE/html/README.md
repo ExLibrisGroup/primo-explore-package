@@ -89,7 +89,8 @@ directive in your template - This includes the link to the record
     <a
       data-emailref="{{item.pnx.control.recordid[0]}}" href="">
       {{item.pnx.display.title[0]}}
-    </a>```
+    </a>
+    ```
      
  ## Examples        
         
