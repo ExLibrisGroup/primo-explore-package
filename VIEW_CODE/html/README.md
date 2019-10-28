@@ -70,7 +70,27 @@
 
 **Notice :** Any link in your template will be removed - for security reasons, we will not allow links other than the link to the record to avoid email exploits.
 
+To add the link to the full record you can either:
+ 1. Use the 
+ 
+ ```
+ <prm-brief-result
+             class="result-item-details"
+             [item]="item"
+             [is-email]="true"
+             layout="column">
+     </prm-brief-result>
+ ```    
+directive in your template - This includes the link to the record
 
+2. Use the following code snippet in your template:
+
+    ```
+    <a
+      data-emailref="{{item.pnx.control.recordid[0]}}" href="">
+      {{item.pnx.display.title[0]}}
+    </a>```
+     
  ## Examples        
         
  Full examples of email templates can be found in the help files folder folder:
