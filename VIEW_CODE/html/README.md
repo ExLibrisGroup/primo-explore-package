@@ -56,7 +56,13 @@
       <div style="font-weight: 600;margin-top:2em;"> Additional Information From the Record:</div>
       <span ng-if="item.pnx.addata.oclcid" atyle="">OCLCID: </span>
       <div dir="auto" ng-repeat="oclcid in item.pnx.addata.oclcid">{{oclcid}}</div>
-      
+ 
+ 
+
+
+**Notice :** Any other link in your template will be removed - for security reasons, we will not allow links other than the link to the record to avoid email exploits.
+
+
  ## Examples        
         
  Full examples of email templates can be found in the help files folder folder:
@@ -77,5 +83,7 @@
     will produce the following email:
     
    ![example external](../../help_files/example-external.png "example external")
+
+
 
 
