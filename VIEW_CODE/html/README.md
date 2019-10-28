@@ -47,17 +47,19 @@
     <prm-logo style="height: 66px;"></prm-logo>
 
     <prm-service-details [item]="item" [is-email]="true"></prm-service-details>
-    ```
+    
  3. You can reference the sent item(pnx/record) using angular syntax to present the relevant data:
  
   use the curly brackets to access the pnx diectly - for example: 
    ```{{item.pnx.display.title}}```
   or loop over values using the ng-repeat directive to add multiple fields:
-  ```
+```
       <div dir="auto" ng-repeat="oclcid in     item.pnx.addata.oclcid">
       <div style="font-weight: 600;margin-top:2em;"> Additional Information From the Record:</div>
       <span ng-if="item.pnx.addata.oclcid" atyle="">OCLCID: </span>
-      <div dir="auto" ng-repeat="oclcid in item.pnx.addata.oclcid">{{oclcid}}</div>```
+      <div dir="auto" ng-repeat="oclcid in item.pnx.addata.oclcid">{{oclcid}}</div>
+      
+
  
 
 
