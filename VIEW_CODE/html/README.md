@@ -43,7 +43,7 @@
   </header>
   <content>
       <general statement/>
-      <records **ng-repeat="item in $ctrl.parentCtrl.delayedItems"**>
+      <records ng-repeat="item in $ctrl.parentCtrl.delayedItems">
           <record1/>
           <record2/>
           ...
