@@ -28,6 +28,31 @@
   
   In this html file you can design your own email template using html.
   
+  Since Primo supports the email action on multiple records you should add the following attribute to the html element represnting a record:
+  
+  ```ng-repeat="item in $ctrl.parentCtrl.delayedItems"```
+  
+  for example:
+  
+  For an email template layout as below the attribute should be added to the records container:
+  
+  ```
+  <header>
+      <logo>
+      <note>
+  </header>
+  <content>
+      <general statement/>
+      <records **ng-repeat="item in $ctrl.parentCtrl.delayedItems"**>
+          <record1/>
+          <record2/>
+          ...
+      </records>
+      <footer>
+      </footer>
+  </content>  
+  ```
+  
   When editing the template you can:
   
   1. Use regular html (use best practices for email templating: https://mailchimp.com/help/about-html-email/) to design the layout of your email based on your preferences.
