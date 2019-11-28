@@ -62,16 +62,15 @@
       <prm-brief-result
              class="result-item-details"
              [item]="item"
-             [is-email]="true"
+             display-mode="email"
              layout="column">
      </prm-brief-result>
 
 
-    <prm-search-result-availability-line tabindex="-1" [result]="item" [is-email]="true"></prm-search-result-availability-line>
+    <prm-search-result-availability-line tabindex="-1" [result]="item" display-mode="email"></prm-search-result-availability-line>
 
     <prm-logo style="height: 66px;"></prm-logo>
-
-    <prm-service-details [item]="item" [is-email]="true"></prm-service-details>
+    
  ```   
  3. You can reference the sent item(pnx/record) using angular syntax to present the relevant data:
  
@@ -102,7 +101,7 @@ To add the link to the full record you can either:
  <prm-brief-result
              class="result-item-details"
              [item]="item"
-             [is-email]="true"
+             display-mode="email"
              layout="column">
      </prm-brief-result>
  ```    
