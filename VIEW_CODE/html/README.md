@@ -30,7 +30,7 @@
   
   Since Primo supports the email action on multiple records you should add the following attribute to the html element represnting a record:
   
-  ```ng-repeat="item in $ctrl.parentCtrl.delayedItems"```
+  ```ng-if="$ctrl.parentCtrl.fullViewLoaded" ng-repeat="item in $ctrl.parentCtrl.delayedItems"```
   
   for example:
   
@@ -43,7 +43,7 @@
   </header>
   <content>
       <general statement/>
-      <records ng-repeat="item in $ctrl.parentCtrl.delayedItems">
+      <records ng-if="$ctrl.parentCtrl.fullViewLoaded" ng-repeat="item in $ctrl.parentCtrl.delayedItems">
           <record1/>
           <record2/>
           ...
