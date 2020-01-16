@@ -67,7 +67,7 @@ prm-topbar.md-primoExplore-theme input {....}
 
 
 
-##Recipes/Examples:
+## Recipes/Examples:
 
 
 # css Recipe 1 - Color Scheme (Starting from August 2016 Release)

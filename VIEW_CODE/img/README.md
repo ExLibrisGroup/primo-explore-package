@@ -1,7 +1,7 @@
 # The Primo New UI Customization Workflow Development Environment
 
 
-##images documentation
+## images documentation
 
  - Primo allows the customization of the following images;
     1. Library Logo - just place a file named `library-logo.png` in this location
