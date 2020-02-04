@@ -100,6 +100,8 @@ The colors are mapped to different elements in the user interface:
 -  cd to the project base directory (C:\**\**\primo-explore-devenv)
 -  Run `gulp app-css --view <your-view/folder code>` for example:
         `gulp app-css --view Auto1`
+- for Primo Ve customers add the --ve flag at the end of the command for example:
+    `gulp app-css --view Auto1 --ve`
 -  A new file will be created on your package css directory named: `app-colors.css`
 -  This file will contain all of the primo-explore theme color definitions.
     We will continue to add more color definitions to extend this ability
