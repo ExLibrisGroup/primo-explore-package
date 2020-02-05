@@ -36,7 +36,7 @@ The development package allows you to configure :
 
   [JavaScript](/VIEW_CODE/js/README.md "javascript documentation")
 
--  For `colors.json.txt` instructions - please see [CSS](./VIEW_CODE/css/README.md "css documentation") documentation
+-  For `colors.json.txt` instructions - please see [CSS](/VIEW_CODE/css/README.md "css documentation") documentation
 
 
 
