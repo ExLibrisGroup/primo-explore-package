@@ -116,14 +116,14 @@ directive in your template - This includes the link to the record
     </a>
     ```
      
-To use your library logo (not the OTB <prm-logo></prm-logo>) you can use your own html, with an img element that has a class attribute of *logo-image* immediatly following the opening tag, for example:
+To use your library logo (not the OTB <prm-logo></prm-logo>) you can use your own html, with an img element that has a data-logo attribute with a value of "email-template" immediatly following the opening tag, for example:
  
  ```
  <table height="60px" width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="wrapper" bgcolor="#17bef7">
     <tbody>
     <tr>
         <td align="center" bgcolor="#eeeeee">
-            <img class="logo-image" translate-attr="{ alt: 'nui.header.LogoAlt' }"  ng-src="custom/emaildemo/img/library-logo.png" height="60" style="height:60px;max-height:60px;background-color:#17bef7;">
+            <img class="logo-image" data-logo="email-template" translate-attr="{ alt: 'nui.header.LogoAlt' }" height="60" style="height:60px;max-height:60px;background-color:#17bef7;">
         </td>
     </tr>
     </tbody>
