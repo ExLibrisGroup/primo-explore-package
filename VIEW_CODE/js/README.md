@@ -120,7 +120,7 @@ for the `prmSearchBarAfter` directive
 
 -  Run the following command in your browsers' console tab:
 ```
-    angular.element($0).scope().$ctrl (angular.element($0).scope().ctrl in version earlier than February 2017)
+    angular.element($0).scope().$ctrl
 ```
 
 - Review the properties of the directive to decide which data elements can be used, avoid methods/functions as they wont be backwards compatible
@@ -198,7 +198,7 @@ template: `<div layout="row" layout-align="center center">
 `angular.reloadWithDebugInfo()`
 -  Focus on the `prmFullViewAfter` directive
 -  Run the following command in your browsers' console tab:
-`angular.element($0).scope().ctrl`
+`angular.element($0).scope().$ctrl`
 
 - Review the properties of the directive to decide which data elements can be used, avoid methods/functions as they wont be backwards compatible
 
