@@ -138,23 +138,23 @@ for the `prmSearchBarAfter` directive
 ```
     controller: 'MyInstitutionComponentController',
 ```
-- Define a controller with 2 getter methods to return the query and selected scope
+- Define a controller with 2 getter methods to return the query and selected scope. In order to access the parentCtrl binding, the controller must implement the ngOnInit life cycle hook.
 ```
 app.controller('MyInstitutionComponentController', [function () {
-        var vm = this;
 
+        this.$onInit = function () {
 
-        vm.getSelectdScope = getSelectdScope;
-        vm.getQuery = getQuery;
+            var vm = this;
 
+            vm.getSelectedScope = function() {
+                return vm.parentCtrl.scopeField;
+            }
 
-        function getSelectdScope() {
-            return vm.parentCtrl.scopeField;
+            vm.getQuery = function() {
+                return vm.parentCtrl.mainSearchField;
+            }
         }
 
-        function getQuery() {
-            return vm.parentCtrl.mainSearchField;
-        }
     }]);
 
 ```
@@ -171,7 +171,7 @@ template: `<div layout="row" layout-align="center center">
                              This is a demo presenting the ability to display query
                              information below the search box</span>
                              <span class="md-subhead">Query: {{$ctrl.getQuery()}}</span>
-                             <span class="md-subhead">Scope: {{$ctrl.getSelectdScope()}}</span>
+                             <span class="md-subhead">Scope: {{$ctrl.getSelectedScope()}}</span>
                              </md-card-title-text>
                              <md-card-title-media>
                              <div class="md-media-sm card-media"></div>
@@ -217,14 +217,14 @@ template: `<div layout="row" layout-align="center center">
 - Define a controller that populates the doi and loads the Altmetrics js file
 ```
 app.controller('MyInstitutionComponentController', ['angularLoad', function (angularLoad) {
-        var vm = this;
-        vm.doi = vm.parentCtrl.item.pnx.addata.doi[0] || '';
+        this.$onInit = function () {
+            var vm = this;
+            vm.doi = vm.parentCtrl.item.pnx.addata.doi[0] || '';
 
-        vm.$onInit = function () {
             angularLoad.loadScript('https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js?' + Date.now()).then(function () {
 
             });
-        };
+        }
     }]);
 ```
 -  Edit the `prmFullViewAfter` directive template to reference the `myInstitutionComponent`
